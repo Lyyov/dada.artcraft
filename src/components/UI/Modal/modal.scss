@@ -1,0 +1,60 @@
+@import "../../../style/variables.scss";
+
+$paddings: 30px;
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px black;
+  padding: 0 $paddings;
+  box-sizing: border-box;
+  display: none;
+
+  &__header {
+    position: relative;
+    padding: $paddings 0;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.3;
+    color: $color_black;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: $paddings / 2;
+    right: $paddings / -2;
+    color: $color_black;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+  }
+
+  &__body h1 {
+    color: $color_black;
+  }
+}
+
+.modal.show {
+  display: block;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 499;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}

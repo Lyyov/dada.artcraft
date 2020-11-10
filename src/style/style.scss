@@ -1,0 +1,158 @@
+@import "./variables.scss";
+
+.logo {
+  display: block;
+  width: 82px;
+  height: 114px;
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.image-container {
+  &__image {
+    width: 100%;
+  }
+}
+
+.borders {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: -1;
+
+  &__line {
+    position: absolute;
+    background-color: $color_cielo-blue;
+    transition: width 0.8s ease 1.6s, height 0.8s ease 1.6s;
+  }
+  &-left {
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 6px;
+  }
+  &-top {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 6px;
+  }
+  &-right {
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 6px;
+  }
+  &-bottom {
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    width: 0;
+  }
+}
+
+h3 {
+  font-family: $font_main;
+  font-size: 45px;
+  color: $color_orange;
+  text-align: center;
+  font-weight: 700;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color_orange;
+  width: 265px;
+  height: 70px;
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  padding: 0 30px;
+  overflow: hidden;
+
+  span {
+    line-height: 1.2;
+    font-size: 18px;
+    color: $color_black;
+    font-weight: 600;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.7);
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.whyUs {
+  padding: 110px 0;
+  &__title {
+    color: $color_black;
+  }
+
+  &__grid {
+    padding: 110px 0;
+    grid-template-columns: repeat(4, minmax(230px, 285px));
+    justify-content: space-between;
+  }
+
+  &__point {
+    font-size: 21px;
+    color: $color_orange;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #979797;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: Arial;
+    font-size: 16px;
+    color: $color_black;
+    letter-spacing: 0.18px;
+    text-align: center;
+    line-height: 22px;
+  }
+
+  &__subtext {
+    font-family: Arial;
+    font-size: 18px;
+    color: $color_orange;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 22px;
+
+    max-width: 400px;
+    min-width: 330px;
+    margin: auto;
+  }
+
+  &__button {
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+.map {
+  img {
+    width: 100%;
+  }
+}

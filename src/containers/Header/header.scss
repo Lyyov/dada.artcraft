@@ -1,0 +1,41 @@
+@import "../../style/variables.scss";
+
+.header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $header_height;
+  background: $header_bcg;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__link {
+    font-family: $font_main;
+    font-weight: 600;
+    font-size: 16px;
+    color: $color_main;
+    text-align: left;
+    line-height: $header_height;
+    transition: color 0.3s ease;
+    margin-right: 50px;
+
+    &:hover {
+      color: $color_hover;
+    }
+  }
+
+  &__logo {
+    background-color: $header_bcg;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
