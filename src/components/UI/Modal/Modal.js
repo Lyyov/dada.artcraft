@@ -5,24 +5,24 @@ import Aux from "../../../hoc/Aux";
 
 import "./modal.scss";
 
-const Modal = ( {title, children, show } ) => {
-  // const [show, setShow] = useState(true);
+const Modal = ( props ) => {
+
   return (
     <Aux>
-      <div className={show ? `modal show` : 'modal'}>
-      <div className="modal__header">
-        <div className="modal__title">
-          {title}
+      <div className={props.show ? `modal show` : 'modal'}>
+        <div className="modal__header">
+          {/* <div className="modal__title">
+            {title}
+          </div> */}
+          <div onClick={props.closeModal} className="modal__close" >
+            &times;
+          </div>
         </div>
-        <div className="modal__close" >
-          &times;
+        <div className="modal__body">
+          {props.children}
         </div>
       </div>
-      <div className="modal__body">
-        { children }
-      </div>
-    </div>
-    {show ? <div className="backdrop" ></div> : null}
+      <div className="backdrop" onClick={props.closeModal}></div>
     </Aux>
   )
 };

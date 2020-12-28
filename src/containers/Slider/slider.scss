@@ -64,7 +64,7 @@
     font-size: 29px;
     color: $color_main;
     text-align: left;
-    padding: 40px 60px;
+    padding: 90px 110px;
     opacity: 0;
     position: relative;
     transition: opacity 0.8s ease 1.6s;
@@ -79,11 +79,13 @@
   background: #d8d8d8;
 
   &__title-absolute {
-    position: absolute;
+    position: static;
     z-index: 1;
     top: 190px;
     left: 0;
     right: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   &__item:after {

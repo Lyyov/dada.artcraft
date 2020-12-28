@@ -1,25 +1,15 @@
 @import "../../../style/variables.scss";
 
-$paddings: 30px;
-
 .modal {
   position: fixed;
   z-index: 500;
-  top: 5rem;
+  top: 0;
   left: 0;
   right: 0;
-  max-width: 500px;
+  width: 90vw;
   margin: auto;
-  background-color: #fff;
-  box-shadow: 1px 1px 1px black;
-  padding: 0 $paddings;
+  background-color: transparent;
   box-sizing: border-box;
-  display: none;
-
-  &__header {
-    position: relative;
-    padding: $paddings 0;
-  }
 
   &__title {
     font-size: 30px;
@@ -30,9 +20,9 @@ $paddings: 30px;
 
   &__close {
     position: absolute;
-    top: $paddings / 2;
-    right: $paddings / -2;
-    color: $color_black;
+    top: 40px;
+    right: -40px;
+    color: #fff;
     font-size: 30px;
     cursor: pointer;
     line-height: 30px;
@@ -40,13 +30,21 @@ $paddings: 30px;
     width: 30px;
   }
 
+  img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+  }
+
   &__body h1 {
     color: $color_black;
   }
-}
-
-.modal.show {
-  display: block;
 }
 
 .backdrop {

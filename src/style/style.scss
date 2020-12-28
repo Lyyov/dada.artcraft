@@ -14,6 +14,7 @@
 .image-container {
   &__image {
     width: 100%;
+    cursor: zoom-in;
   }
 }
 
@@ -69,12 +70,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $color_orange;
+  background-color: $color_cielo-blue;
   width: 265px;
   height: 70px;
   border: 0;
   cursor: pointer;
-  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
   padding: 0 30px;
   overflow: hidden;
 
@@ -89,7 +90,7 @@ button {
     outline: 0;
   }
   &:hover {
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.7);
+    background-color: $color_orange;
   }
   &:active {
     opacity: 0.8;
@@ -113,7 +114,7 @@ button {
   }
 
   &__point {
-    font-size: 21px;
+    font-size: 25px;
     color: $color_orange;
     text-transform: uppercase;
     font-weight: 600;
@@ -134,8 +135,8 @@ button {
 
   &__subtext {
     font-family: Arial;
-    font-size: 18px;
-    color: $color_orange;
+    font-size: 16px;
+    color: $color_black;
     letter-spacing: 0.2px;
     text-align: center;
     line-height: 22px;
@@ -148,6 +149,17 @@ button {
   &__button {
     margin: auto;
     margin-top: 20px;
+    background-color: $color_orange;
+
+    span {
+      color: $color_black;
+    }
+  }
+  &__button:hover {
+    background-color: $color_black;
+    span {
+      color: $color_orange;
+    }
   }
 }
 

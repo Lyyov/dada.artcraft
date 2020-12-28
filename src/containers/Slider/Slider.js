@@ -42,6 +42,7 @@ function SamplePrevArrow(props) {
 }
 
 const slider = (props) => {
+  const { className, customSettings } = props;
   const settings = {
     dots: false,
     infinite: true,
@@ -49,10 +50,9 @@ const slider = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    ...customSettings
   };
-
-const { className } = props;
 
   return (
     <Slider {...settings} className={`slider ${className}`}>
