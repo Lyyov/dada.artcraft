@@ -1,6 +1,6 @@
 import "./style/style.scss";
 import { Switch } from 'react-router-dom';
-import { SmoothProvider } from 'react-smooth-scrolling'
+import { SmoothProvider } from 'react-smooth-scrolling';
 
 import Routes from './routes/routes';
 import Header from './containers/Header/Header';
