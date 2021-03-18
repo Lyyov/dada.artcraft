@@ -202,7 +202,7 @@ const projects = {
   'prgisc': {
     id: 1,
     title: "PR&GISC",
-    subtitle: "Brand Project | Recruitment/ Accounting Agency | 2019",
+    subtitle: "Brand Project | Recruitment / Accounting Agency | 2019",
     mainImg: {
       alt: "image",
       src: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/c88974103080103.5f4cf302e9a7f.jpg"

@@ -1,6 +1,15 @@
 import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
-import { Home, Saula, Sagro, Projects, Prgisc, Mancomm, Banners } from "../components/pages";
+import {  Home,
+          Saula, 
+          Sagro, 
+          Projects, 
+          Prgisc, 
+          Mancomm, 
+          Banners, 
+          About,
+          Branding 
+        } from "../components/pages";
 
 const routes = [
   {
@@ -11,6 +20,11 @@ const routes = [
   {
     path: "/projects",
     component: Projects,
+    exact: true
+  },
+  {
+    path: "/about",
+    component: About,
     exact: true
   },
   {
@@ -46,6 +60,11 @@ const routes = [
   {
     path: '/banners',
     component: Banners,
+    exact: true
+  },
+  {
+    path: '/branding',
+    component: Branding,
     exact: true
   }
 ];

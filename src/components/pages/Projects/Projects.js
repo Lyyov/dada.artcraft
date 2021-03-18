@@ -35,7 +35,7 @@ const projects = [
   },
   {
     name: 'saula',
-    logo: mancommLogo,
+    logo: `${process.env.PUBLIC_URL }/assets/saula/logo.svg`,
     cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/032549107170459.5fa13695efe54.jpg",
     domain: 'Coffee To Go',
     to: '/saula'
