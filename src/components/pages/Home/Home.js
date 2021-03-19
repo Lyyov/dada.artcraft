@@ -10,6 +10,8 @@ import sagro from "../../../assets/sagro/banner.jpg";
 import prciscLogo from "../../../assets/prcisc/logo.svg";
 import map from '../../../assets/production/map/map.jpg';
 
+import sculpture from '../../../assets/production/slider-portofolio/sculpture.png'
+
 const Home = () => {
 
   return (
@@ -116,7 +118,7 @@ const Home = () => {
         <Slider className="sliderServices">
           <div className="sliderServices__item">
             <div className="sliderServices__image-container image-container">
-              <img className="imgage-container_image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c88974103080103.5f4cf302e9a7f.jpg" alt="" /> 
+              <img className="imgage-container_image" src={sculpture} alt="" /> 
             </div>
             <div className={`sliderServices__content`}>
               <div className={`sliderServices__text`}>
@@ -127,12 +129,12 @@ const Home = () => {
                   <li className="borders__line borders-bottom"></li>
                 </ul>
                 <h3 className="sliderServices__title-absolute">
-                  <img src={prciscLogo} alt=""/>
+                  Portofolio
                 </h3>
-                <div className={`sliderServices__title`}>Recruitment / Accounting Agency</div>
+                <div className={`sliderServices__title`}>Branding projects</div>
                 <Link to="/branding">
                   <button className="button sliderServices__button">
-                    <span>Checkout</span>
+                    <span>See full projects</span>
                   </button>
                 </Link>
                 
