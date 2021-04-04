@@ -10,6 +10,12 @@ import sagro from "../../../assets/sagro/banner.jpg";
 import prciscLogo from "../../../assets/prcisc/logo.svg";
 import map from '../../../assets/production/map/map.jpg';
 
+//blog images home
+
+import blog1 from '../../../assets/blog/blog-home1.png';
+import blog2 from '../../../assets/blog/blog-home2.png';
+import blog3 from '../../../assets/blog/blog-home3.png';
+
 import sculpture from '../../../assets/production/slider-portofolio/sculpture.png'
 
 const Home = () => {
@@ -141,7 +147,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="sliderServices__item">
+          <div className="sliderServices__item sliderServices__item-sagro">
             <div className="sliderServices__image-container image-container">
               <img className="imgage-container_image" src={sagro} alt="" /> 
             </div>
@@ -187,50 +193,65 @@ const Home = () => {
           </div>
         </Slider>
       </div>
-      <section className="whyUs">
+
+      <section className="homeBlog">
         <div className="container">
-          <h3 className="whyUs__title">Why us</h3>
-          <div className="grid whyUs__grid">
-            <div className="whyUs__item">
-              <div className="whyUs__point">consulting</div>
-              <p className="whyUs__text">
-                Schedule an appointment to discuss your goals and we will 
-              </p>
+          <div className="row">
+            <div className="col-lg-12 homeBlog__header">
+              <h3 className="homeBlog__title">Our Blogs</h3>
+              <a href="#" className="button-underline homeBlog__button-underline">
+                View All
+              </a>
             </div>
-            <div className="whyUs__item">
-              <div className="whyUs__point">solution</div>
-              <p className="whyUs__text">
-                Schedule an appointment to discuss your goals and we will 
-              </p>
+            <div className="col-md-4 col-sm-6 col-12">
+              <a href="#" className="blogHome__item blogItem">
+                <span className="blogItem__image">
+                  <img src={blog1} alt=""/>
+                  <span className="blogItem__more">
+                    <span>More</span> <span className="blogItem__plus">+</span>
+                  </span>
+                </span>
+                <span className="blogItem__category">
+                  interior
+                </span>
+                <span className="blogItem__title">
+                  5 tips to give you some idea for your smart house
+                </span>
+              </a>
             </div>
-            <div className="whyUs__item">
-              <div className="whyUs__point">execution</div>
-              <p className="whyUs__text">
-                Schedule an appointment to discuss your goals and we will 
-              </p>
+            <div className="col-md-4 col-sm-6 col-12">
+              <a href="#" className="blogHome__item blogItem">
+                <span className="blogItem__image">
+                  <img src={blog2} alt=""/>
+                  <span className="blogItem__more">
+                    <span>More</span> <span className="blogItem__plus">+</span>
+                  </span>
+                </span>
+                <span className="blogItem__category">
+                  interior
+                </span>
+                <span className="blogItem__title">
+                  5 tips to give you some idea for your smart house
+                </span>
+              </a>
             </div>
-            <div className="whyUs__item">
-              <div className="whyUs__point">support</div>
-              <p className="whyUs__text">
-                Schedule an appointment to discuss your goals and we will 
-              </p>
+            <div className="col-md-4 col-sm-6 col-12">
+              <a href="#" className="blogHome__item blogItem">
+                <span className="blogItem__image">
+                  <img src={blog3} alt=""/>
+                  <span className="blogItem__more">
+                    <span>More</span> <span className="blogItem__plus">+</span>
+                  </span>
+                </span>
+                <span className="blogItem__category">
+                  interior
+                </span>
+                <span className="blogItem__title">
+                  5 tips to give you some idea for your smart house
+                </span>
+              </a>
             </div>
           </div>
-          <p className="whyUs__subtext">
-            Last but not least. Because this is our passion an we do it with love.
-          </p>
-          <button className="button whyUs__button">
-            <span>Book a consultation</span>
-            <span className="button__icon">
-              <svg viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                  <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                      <g id="Desktop-HD" transform="translate(-294.000000, -27.000000)" stroke="currentColor">
-                          <polyline points="294.522684 31.4244555 308.564634 31.4244555 305.202477 34.7371691 308.861295 31.1772381 305.202477 28.3589594"></polyline>
-                      </g>
-                  </g>
-              </svg>
-            </span>
-          </button>
         </div>
       </section>
       <section className="map">

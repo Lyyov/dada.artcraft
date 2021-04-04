@@ -106,6 +106,9 @@
     background: #0c0b15;
     opacity: 0.82;
   }
+  &__item-sagro:after {
+    opacity: 0.32;
+  }
   &__text {
     width: 90vw;
     height: calc(100vh - 120px - #{$header_height});

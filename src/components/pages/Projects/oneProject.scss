@@ -25,6 +25,12 @@
     background-color: #0d0b14;
     position: relative;
   }
+  &__section-sagro {
+    background-color: rgba($color: #0d0b14, $alpha: 0.1);
+  }
+  &__section-mancomm &__logo img {
+    max-width: 400px;
+  }
   &__inner {
     position: absolute;
     left: 0;
@@ -63,13 +69,15 @@
     opacity: 0.7;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 
     &:hover {
       opacity: 1;
     }
 
     img {
-      max-width: 100%;
+      max-width: 300px;
     }
   }
   .image-container__image {
@@ -111,6 +119,8 @@
     }
   }
 }
+
+
 
 .project {
   background-color: #121212;
