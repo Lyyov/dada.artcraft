@@ -8,13 +8,6 @@ import Modal from '../../UI/Modal/Modal'
 import poorgif from '../../../assets/svg/pour-gif.gif';
 import sagro from "../../../assets/sagro/banner.jpg";
 import prciscLogo from "../../../assets/prcisc/logo.svg";
-import map from '../../../assets/production/map/map.jpg';
-
-//blog images home
-
-import blog1 from '../../../assets/blog/blog-home1.png';
-import blog2 from '../../../assets/blog/blog-home2.png';
-import blog3 from '../../../assets/blog/blog-home3.png';
 
 import sculpture from '../../../assets/production/slider-portofolio/sculpture.png'
 
@@ -193,70 +186,6 @@ const Home = () => {
           </div>
         </Slider>
       </div>
-
-      <section className="homeBlog">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 homeBlog__header">
-              <h3 className="homeBlog__title">Our Blogs</h3>
-              <a href="#" className="button-underline homeBlog__button-underline">
-                View All
-              </a>
-            </div>
-            <div className="col-md-4 col-sm-6 col-12">
-              <a href="#" className="blogHome__item blogItem">
-                <span className="blogItem__image">
-                  <img src={blog1} alt=""/>
-                  <span className="blogItem__more">
-                    <span>More</span> <span className="blogItem__plus">+</span>
-                  </span>
-                </span>
-                <span className="blogItem__category">
-                  interior
-                </span>
-                <span className="blogItem__title">
-                  5 tips to give you some idea for your smart house
-                </span>
-              </a>
-            </div>
-            <div className="col-md-4 col-sm-6 col-12">
-              <a href="#" className="blogHome__item blogItem">
-                <span className="blogItem__image">
-                  <img src={blog2} alt=""/>
-                  <span className="blogItem__more">
-                    <span>More</span> <span className="blogItem__plus">+</span>
-                  </span>
-                </span>
-                <span className="blogItem__category">
-                  interior
-                </span>
-                <span className="blogItem__title">
-                  5 tips to give you some idea for your smart house
-                </span>
-              </a>
-            </div>
-            <div className="col-md-4 col-sm-6 col-12">
-              <a href="#" className="blogHome__item blogItem">
-                <span className="blogItem__image">
-                  <img src={blog3} alt=""/>
-                  <span className="blogItem__more">
-                    <span>More</span> <span className="blogItem__plus">+</span>
-                  </span>
-                </span>
-                <span className="blogItem__category">
-                  interior
-                </span>
-                <span className="blogItem__title">
-                  5 tips to give you some idea for your smart house
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="map">
-        <img src={map} alt=""/>
-      </section>
     </Aux>
   )
 };
