@@ -14,15 +14,19 @@ const header = () => {
             <ul className="header__bloc">
               <Link className="header__link" to="/">Home</Link>
               <Link className="header__link" to="/projects">Works</Link>
-              <Link className="header__link" to="/">Services</Link>
+              <Link className="header__link" to="/services">Services</Link>
             </ul>
             <ul className="header__bloc">
               <Link className="header__link" to="/about">About Us</Link>
-              <a className="header__link" href="/">Contacts</a>
-              <a className="header__link" href="/">Ro/En</a>
+              <Link className="header__link" to="/contacts">Contacts</Link>
+              {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
             <Link className="header__logo logo" to="/">
-              <img src={logo} alt="logo" />
+              {/* <img src={logo} alt="logo" />
+               */}
+                dada
+                <br/>
+                art.craft
             </Link>
           </div>
         </div>

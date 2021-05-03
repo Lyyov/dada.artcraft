@@ -1,39 +1,16 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
-import { motion, useViewportScroll, useTransform } from "framer-motion";
-
-import map from '../../../assets/production/map/map.jpg';
+import React, { useEffect } from 'react';
 
 import './about.scss'
 
 const About = () => {
-
-  const [elementTop, setElementTop] = useState(0);
-  const imgRef = useRef(null);
-  const { scrollY } = useViewportScroll();
-
-  const y = useTransform(scrollY, [elementTop, elementTop + 3], [0, -1], {
-    clamp: false
-  });
-
-  useLayoutEffect(() => {
-    const element = imgRef.current;
-    setElementTop(element.offsetTop);
-  }, [imgRef]);
   
   useEffect(() => {
     let borders = document.getElementById('borders');
-    let title = document.getElementById('title');
-    borders.classList.add('animate');
-    title.classList.add('animate');
+    borders.classList.add("animate")
   })
 
   return (
     <div className="about" id="about">
-      <section className="about__banner">
-        <div ref={imgRef} className="about__image-container-banner about__image-container">
-          <motion.img src={process.env.PUBLIC_URL + '/assets/about/banner.jpg'} alt="" style={{ y }} />
-        </div>
-        <div className={`about__banner-content`}>
           <div className={`about__text`}>
             <ul className="borders" id="borders">
               <li className="borders__line borders-left"></li>
@@ -41,13 +18,17 @@ const About = () => {
               <li className="borders__line borders-right"></li>
               <li className="borders__line borders-bottom"></li>
             </ul>
-            <h1 className="about__title" id="title">Follow your own dream.</h1>
+            <h3 className="about__title title">Our Story</h3>
+            <p className="about__paragraph">
+            We are DaDa.Art Craft team, and we’re in love with everything needs to be designed. We are committed to helping businesses grow and succeed through outstanding design. Our mission is to help you achieve a powerful brand that supports the purpose that you stand for.
+            </p>
+            <p className="about__paragraph">
+            Whether you're in need of a rebrand, new website, or a social media revamp, we'll create a custom package suited to your needs, designed just for you so you can make the right kind of impact. So, using purpose and esthetics, we can help you move faster from idea to action and bring your sustainable business a step closer to its purpose.
+            </p>
+            <p className="about__paragraph">
+            Schedule an appointment to discuss your goals and we will create a personalized proposal to cover your needs, we’re free enough to challenge what’s expected, and bold enough to conjure up something new. 
+            </p>
           </div>
-        </div>
-      </section>
-      <section className="about__hello">
-        
-      </section>
     </div>
   )
 };

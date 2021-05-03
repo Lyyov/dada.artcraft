@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 a:focus {
-  color: inherit;
+  color: #ffff !important;
 }
 
 .logo {
@@ -81,18 +81,23 @@ h3 {
   font-weight: 700;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: $color_cielo-blue;
-  width: 265px;
-  height: 70px;
+  min-width: 200px;
+  height: 60px;
   border: 0;
   cursor: pointer;
   transition: background-color 0.3s ease, opacity 0.3s ease;
   padding: 0 30px;
   overflow: hidden;
+  border-radius: 3px;
 
   span {
     line-height: 1.2;
@@ -119,6 +124,7 @@ h3 {
   }
   &:hover {
     background-color: $color_orange;
+    text-decoration: none !important;
   }
   &:active {
     opacity: 0.8;
@@ -201,7 +207,6 @@ h3 {
     letter-spacing: 0.2px;
     text-align: center;
     line-height: 22px;
-
     max-width: 400px;
     min-width: 330px;
     margin: auto;
@@ -255,4 +260,73 @@ h3 {
   img {
     width: 100%;
   }
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #E1E1E1;
+    height: 54px;
+    border-radius: 3px;
+    padding: 0 15px;
+    color: $color_black;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  
+    &:focus {
+      border-color: $color_black;
+      outline: 0;
+    }
+  }
+
+  &__input:focus ~ &__label {
+    transform: translateY(-17px);
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 11px;
+    color: #2C2C2C;
+    letter-spacing: 0.03px;
+    text-align: left;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    padding: 5px;
+    background-color: #ffff;
+    transition: transform .3s ease;
+  }
+}
+
+.input-container.focused .input-container__label {
+  border-color: $color_black;
+  transform: translateY(-17px);
+}
+.input-container textarea {
+  height: auto;
+  padding-top: 30px;
+
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+
+input[type="submit"] {
+  background: #1E1E23;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  height: 54px;
+  width: 169px;
 }

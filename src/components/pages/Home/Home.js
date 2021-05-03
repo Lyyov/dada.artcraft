@@ -112,7 +112,7 @@ const Home = () => {
 
         </Slider>
       </div>
-      <div className="slider-container">
+      {/* <div className="slider-container">
         
         <Slider className="sliderServices">
           <div className="sliderServices__item">
@@ -185,7 +185,7 @@ const Home = () => {
             </div>
           </div>
         </Slider>
-      </div>
+      </div> */}
     </Aux>
   )
 };

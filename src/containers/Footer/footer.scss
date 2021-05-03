@@ -14,7 +14,7 @@
     color: $color_orange;
     text-transform: uppercase;
     letter-spacing: 8px;
-    line-height: 2;
+    line-height: 1.6;
   }
 
   &__title {
@@ -32,6 +32,7 @@
     line-height: 29px;
     opacity: 1;
     transition: opacity 0.3s ease;
+    font-weight: 300;
 
     &:hover {
       opacity: 0.7;

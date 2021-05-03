@@ -8,7 +8,10 @@ import {  Home,
           Mancomm, 
           Banners, 
           About,
-          Branding 
+          Branding, 
+          Services,
+          Contact,
+          Breaf
         } from "../components/pages";
 
 const routes = [
@@ -25,6 +28,21 @@ const routes = [
   {
     path: "/about",
     component: About,
+    exact: true
+  },
+  {
+    path: "/contacts",
+    component: Contact,
+    exact: true
+  },
+  {
+    path: "/breaf",
+    component: Breaf,
+    exact: true
+  },
+  {
+    path: "/services",
+    component: Services,
     exact: true
   },
   {
