@@ -11,11 +11,7 @@ import goodToKnow from '../../../assets/services/good-to-know.png'
 import './services.scss'
 
 const Services = () => {
-  
-  useEffect(() => {
-    let borders = document.getElementById('borders');
-    borders.classList.add("animate")
-  })
+
 
   const servicesApi = [
     {
@@ -41,20 +37,20 @@ const Services = () => {
   ]
   const howItWorkApi = [
     {
-      title: "consulting",
-      text: "Your story and your dreams are all the things we need to know! Send in your application then we'll hop on a call too see if we're a good fit."
+      title: "application",
+      text: "Please send your brief, and we will check in a call if we're a good match for your project."
+    },
+    {
+      title: "guidance",
+      text: "We're here to listen and to help our customers succeed by providing efficient and creative solutions."
     },
     {
       title: "solution",
-      text: "Based on market research and your input, we’ll create a strategy to meet your business goals"
+      text: "Based on your target goals, we will develop strategies to achieve what is suitable for your business."
     },
     {
       title: "execution",
-      text: "We’ll craft compelling marketing materials and execute the approved design strategy."
-    },
-    {
-      title: "support",
-      text: "We take a comprehensive approach to help our clients succeed, providing effective creative solutions."
+      text: "We will produce competitive content and will deliver approved promotional materials on time."
     }
   ]
   const services = servicesApi.map(item => (
@@ -86,16 +82,16 @@ const Services = () => {
   ))
   const goodToKnowApi = [
     {
-      title: "WHAT'S THE INVESTMENT?",
-      text: "Our packages are highly custom because every business has a different set of needs. In the consultation call, we'll uncover the best branding solutions for you to make sure you get the most out of your investment."
+      title: "WHAT’S THE INVESTMENT?",
+      text: "Our packages are fully customized because each person/company has its own requirements. After the consultation stage, once we understand your needs, we'll match the best solutions for your business to make sure that you get the most out of your investment."
     },
     {
-      title: "title 2",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, sapiente. "
+      title: "WHEN CAN WE START?",
+      text: "Usually, each project is crafted for about 3-6 weeks. Our practice shows that it is best to schedule the project in advance, but it all depends on the time of the year. If you need to launch in no time, feel free to call us to find a solution."
     },
     {
-      title: "title 3",
-      text: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae similique exercitationem dolorem suscipit! Ut, unde delectus ex expedita eaque debitis. "
+      title: "WHAT IF WE NEED JUST A LOGO?",
+      text: "We are open to the exclusive logo service, although the logo is just one element of the brand, and we think it is better if all the elements are built around a unique strategy so that you have a consistent presence everywhere."
     }
   ]
   const knowItems = goodToKnowApi.map(item => (
@@ -113,18 +109,15 @@ const Services = () => {
       <section className="services__relative">
         <img className="services__banner" src={headerbanner} alt="banner"/>
         <div className={`services__text`}>
-          <ul className="borders" id="borders">
-            <li className="borders__line borders-left"></li>
-            <li className="borders__line borders-top"></li>
-            <li className="borders__line borders-right"></li>
-            <li className="borders__line borders-bottom"></li>
-          </ul>
-          <h3 className="services__title title">Services</h3>
+          {/* <h3 className="services__title title">Services</h3> */}
           <p className="services__paragraph">
-          We are imagining and exploring possibilities. Our projects starts with observing and analyzing, the core of our projects. 
+          We imagine and explore possibilities. Our projects start with observing and analyzing the essence and uniqueness of the brand we need to create, the story behind and the focal points.
           </p>
           <p className="services__paragraph">
-          When designing a brand we focus on finding its unique values and features. It helps people feel and understand what the brand is about. It creates touchpoints and facilitates bonds with the customers.
+          When we create a brand, we focus on finding the values and characteristics that help people feel what the brand means and why it needs to stand out. We create points of contact and facilitate the connection between your service and customers because brands are made for people and are about people.
+          </p>
+          <p className="services__mark">
+          Design is a second chance to <br/> make a first impression
           </p>
         </div>
       </section>

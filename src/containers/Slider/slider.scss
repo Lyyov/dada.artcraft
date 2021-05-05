@@ -150,14 +150,14 @@ $height: 36px;
     top: calc(50% - #{$height}/ 2);
     height: $height;
     width: $height;
-    background-color: $black_bcg;
     cursor: pointer;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.3;
 
     path {
       transition: fill 0.3s ease;
@@ -167,7 +167,7 @@ $height: 36px;
     right: 2.5vw;
 
     svg {
-      transform: rotate(180deg);
+      
       margin-left: 3px;
     }
   }
@@ -176,13 +176,14 @@ $height: 36px;
 
     svg {
       margin-right: 3px;
+      transform: rotate(180deg);
     }
   }
-  &__custom-nav:hover path {
-    fill: #fff;
+  &__custom-nav:hover {
+    opacity: 1;
   }
   &__custom-nav:active {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   .slick-slide > div {
     height: 100%;

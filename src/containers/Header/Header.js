@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import React from 'react'
 
-import logo from '../../assets/logo/logo.svg';
+import logo from '../../assets/logo/logo-text-svg.svg';
 
 import "./header.scss";
 
@@ -22,11 +23,10 @@ const header = () => {
               {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
             <Link className="header__logo logo" to="/">
-              {/* <img src={logo} alt="logo" />
-               */}
-                dada
+              <img src={logo} alt="logo" />
+                {/* dada
                 <br/>
-                art.craft
+                art.craft */}
             </Link>
           </div>
         </div>

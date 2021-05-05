@@ -12,16 +12,14 @@ import "./slider.scss";
 function arrow (classNameNav, onClick) {
   return (
     <div onClick={onClick} className={`slider__custom-nav ${classNameNav}`}>
-        <svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-            <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <g id="Left-arrow" transform="translate(-11.000000, -14.000000)">
-                    <g>
-                        <circle className="custom-nav-arrow" fill="#1E1E23" cx="18" cy="18" r="18"></circle>
-                        <path id="Line-2" d="M20,14 L20,18 L22,18 L22,19 L20,19 L20,23 L11,18.5 L20,14 Z" fill="#979797" fillRule="nonzero"></path>
-                    </g>
-                </g>
-            </g>
-        </svg>
+      <svg width="16px" height="28px" viewBox="0 0 16 28" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <title>Path</title>
+          <g id="Services" stroke="none" stroke-width="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
+              <g id="Desktop-HD" transform="translate(-1368.000000, -2801.000000)" stroke="#3A3A3A" strokeWidth="1.5">
+                  <path d="M1369,2828 L1382.81524,2815.42283 C1382.93273,2815.31547 1383,2815.16163 1383,2815 C1383,2814.83837 1382.93273,2814.68453 1382.81524,2814.57717 L1369,2802" id="Path"></path>
+              </g>
+          </g>
+      </svg>
     </div>
   )
 }
