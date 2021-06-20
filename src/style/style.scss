@@ -90,15 +90,17 @@ h3 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: $color_cielo-blue;
-  min-width: 200px;
-  height: 60px;
+  background-color: $color_hover;
+  min-width: 232px;
+  height: 61px;
   border: 0;
   cursor: pointer;
   transition: background-color 0.3s ease, opacity 0.3s ease;
   padding: 0 30px;
+  padding-left: 50px;
   overflow: hidden;
   border-radius: 3px;
+
 
   span {
     line-height: 1.2;
@@ -124,7 +126,7 @@ h3 {
     outline: 0;
   }
   &:hover {
-    background-color: $color_orange;
+    background-color: $color_cielo-blue;
     text-decoration: none !important;
   }
   &:active {

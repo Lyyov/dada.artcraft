@@ -11,7 +11,8 @@ import {  Home,
           Branding, 
           Services,
           Contact,
-          Breaf
+          Breaf,
+          BeautyOffice
         } from "../components/pages";
 
 const routes = [
@@ -83,6 +84,11 @@ const routes = [
   {
     path: '/branding',
     component: Branding,
+    exact: true
+  },
+  {
+    path: '/beauty-office',
+    component: BeautyOffice,
     exact: true
   }
 ];

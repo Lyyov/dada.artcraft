@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 import Slider from '../../../containers/Slider/Slider'
 
@@ -11,7 +12,11 @@ import goodToKnow from '../../../assets/services/good-to-know.png'
 import './services.scss'
 
 const Services = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   const servicesApi = [
     {
