@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-import Aux from "../../../hoc/Aux";
+import Aux from "../../../hoc/Auxjs";
 
 import "./modal.scss";
 
