@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Auxjs';
 import Slider from '../../../containers/Slider/Slider';
 import Modal from '../../UI/Modal/Modal'
 
