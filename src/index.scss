@@ -135,9 +135,4 @@ a:hover {
 main {
   min-height: 600px;
   padding-top: $header_height;
-
-  &.hidden {
-    height: 100vh;
-    overflow: hidden;
-  }
 }
