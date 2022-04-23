@@ -136,3 +136,7 @@ main {
   min-height: 600px;
   padding-top: $header_height;
 }
+
+.blocked {
+  overflow: hidden;
+}
