@@ -17,6 +17,25 @@ const Contact = () => {
     handleChangeEmail = (e) => setData({ ...data, email: e.target.value }),
     handleChangeMessage = (e) => setData({ ...data, message: e.target.value });
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
+
   return (
     <div className="contact" id="contact">
       <div className="container">
@@ -29,11 +48,7 @@ const Contact = () => {
             <p className="contact__text">
               Tell us more about your project or just say hello.
             </p>
-            <form
-              name="contact"
-              method="post"
-              onSubmit={(e) => e.preventDefault()}
-            >
+            <form onSubmit={handleSubmit}>
               {/* need this for netlify bots form deploy */}
               <input type="hidden" name="form-name" value="contact" />
               <div className="row">
