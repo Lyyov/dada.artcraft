@@ -29,7 +29,13 @@ const Contact = () => {
             <p className="contact__text">
               Tell us more about your project or just say hello.
             </p>
-            <form name="contact" method="POST" data-netlify="true">
+            <form
+              name="contact"
+              method="post"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              {/* need this for netlify bots form deploy */}
+              <input type="hidden" name="form-name" value="contact" />
               <div className="row">
                 <div className="col-md-6">
                   <div
