@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import FormSubmittedNotification from "../../UI/Notifications/FormSubmittedNotification";
+
 import "./contact.scss";
 
 const Contact = () => {
   const [data, setData] = useState({
-      firs_tname: "",
-      last_name: "",
-      email: "",
-      message: "",
-    }),
-    handleChangeFirstname = (e) =>
+    first_tname: "",
+    last_name: "",
+    email: "",
+    message: "",
+  });
+
+  const message = {
+    ok: "Thank you for get in touch! Soon we will contact you.",
+    error: "Somthing went wrong! Try again later.",
+  };
+
+  const [formStatus, setFormStatus] = useState(false); // false, ok, error
+
+  // change data handlers
+  const handleChangeFirstname = (e) =>
       setData({ ...data, first_name: e.target.value }),
     handleChangeLastname = (e) =>
       setData({ ...data, last_name: e.target.value }),
@@ -24,16 +35,24 @@ const Contact = () => {
       )
       .join("&");
   };
+
   const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...data }),
     })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+      .then(() => setFormStatus("ok"))
+      .catch((error) => {
+        console.log("contact submit error", error);
+        setFormStatus("error");
+      });
 
     e.preventDefault();
+  };
+
+  const handleFormStatus = (status) => {
+    return <FormSubmittedNotification status={status} message={message.ok} />;
   };
 
   return (
@@ -55,7 +74,7 @@ const Contact = () => {
                 <div className="col-md-6">
                   <div
                     className={
-                      data.firstname !== ""
+                      data.first_name !== ""
                         ? `input-container focused`
                         : `input-container`
                     }
@@ -75,7 +94,7 @@ const Contact = () => {
                 <div className="col-md-6">
                   <div
                     className={
-                      data.lastname !== ""
+                      data.last_name !== ""
                         ? `input-container focused`
                         : `input-container`
                     }
@@ -124,7 +143,6 @@ const Contact = () => {
                       onChange={handleChangeMessage}
                       rows="5"
                       className="input-container__input"
-                      placeholder="Type the message you wish to send"
                       name="message"
                       id="message"
                     />
@@ -141,6 +159,9 @@ const Contact = () => {
                 </div>
                 <div className="col-md-5">
                   <input type="submit" value="Submit" />
+                </div>
+                <div className="col-sm-12">
+                  {formStatus && handleFormStatus(formStatus)}
                 </div>
               </div>
             </form>
@@ -174,7 +195,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="text-center">
-          <Link to="/breaf" className="contact__button button">
+          <Link to="/brief" className="contact__button button">
             <span>Complete the Brief</span>
             <span className="button__icon">
               <svg

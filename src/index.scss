@@ -140,3 +140,17 @@ main {
 .blocked {
   overflow: hidden;
 }
+
+.notification {
+  padding: 15px;
+  background-color: $succes;
+  border-radius: 3px;
+
+  &-error {
+    background-color: $error;
+  }
+
+  p {
+    color: $color_black;
+  }
+}

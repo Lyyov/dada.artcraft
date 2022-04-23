@@ -1,55 +1,56 @@
 import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
-import {  Home,
-          Saula, 
-          Sagro, 
-          Projects, 
-          Prgisc, 
-          Mancomm, 
-          Banners, 
-          About,
-          Branding, 
-          Services,
-          Contact,
-          Breaf,
-          BeautyOffice
-        } from "../components/pages";
+import {
+  Home,
+  Saula,
+  Sagro,
+  Projects,
+  Prgisc,
+  Mancomm,
+  Banners,
+  About,
+  Branding,
+  Services,
+  Contact,
+  Brief,
+  BeautyOffice,
+} from "../components/pages";
 
 const routes = [
   {
     path: "/",
     component: Home,
-    exact: true
+    exact: true,
   },
   {
     path: "/projects",
     component: Projects,
-    exact: true
+    exact: true,
   },
   {
     path: "/about",
     component: About,
-    exact: true
+    exact: true,
   },
   {
     path: "/contacts",
     component: Contact,
-    exact: true
+    exact: true,
   },
   {
-    path: "/breaf",
-    component: Breaf,
-    exact: true
+    path: "/brief",
+    component: Brief,
+    exact: true,
   },
   {
     path: "/services",
     component: Services,
-    exact: true
+    exact: true,
   },
   {
     path: "/saula",
     component: Saula,
-    exact: true
+    exact: true,
     // routes: [
     //   {
     //     path: "/tacos/bus",
@@ -62,35 +63,35 @@ const routes = [
     // ]
   },
   {
-    path: '/sagro',
+    path: "/sagro",
     component: Sagro,
-    exact: true
+    exact: true,
   },
   {
-    path: '/prgisc',
+    path: "/prgisc",
     component: Prgisc,
-    exact: true
+    exact: true,
   },
   {
-    path: '/mancomm',
+    path: "/mancomm",
     component: Mancomm,
-    exact: true
+    exact: true,
   },
   {
-    path: '/banners',
+    path: "/banners",
     component: Banners,
-    exact: true
+    exact: true,
   },
   {
-    path: '/branding',
+    path: "/branding",
     component: Branding,
-    exact: true
+    exact: true,
   },
   {
-    path: '/beauty-office',
+    path: "/beauty-office",
     component: BeautyOffice,
-    exact: true
-  }
+    exact: true,
+  },
 ];
 
 function RouteWithSubRoutes(route) {
@@ -98,7 +99,7 @@ function RouteWithSubRoutes(route) {
     <Route
       exact={route.exact}
       path={route.path}
-      render={props => (
+      render={(props) => (
         // pass the sub-routes down to keep nesting
         <route.component {...props} routes={route.routes} />
       )}
@@ -106,15 +107,12 @@ function RouteWithSubRoutes(route) {
   );
 }
 function Routes() {
-  
   return (
     <Fragment>
-      {
-      routes.map((route, i) => {
-        return <RouteWithSubRoutes key={i} {...route} />
-      })
-    }
+      {routes.map((route, i) => {
+        return <RouteWithSubRoutes key={i} {...route} />;
+      })}
     </Fragment>
-  )
+  );
 }
 export default Routes;
