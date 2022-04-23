@@ -16,7 +16,9 @@ const Header = () => {
   }, [history]);
 
   // on nav open set a background with opacity on the window
-  const backdrop = () => <div className="header__backdrop"></div>;
+  const backdrop = () => (
+    <div onClick={() => closeBurger()} className="header__backdrop"></div>
+  );
 
   const switchBurger = () => {
     const body = document.body.classList;
