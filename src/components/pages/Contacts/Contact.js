@@ -5,15 +5,15 @@ import "./contact.scss";
 
 const Contact = () => {
   const [data, setData] = useState({
-      firstname: "",
-      lastname: "",
+      firs_tname: "",
+      last_name: "",
       email: "",
       message: "",
     }),
     handleChangeFirstname = (e) =>
-      setData({ ...data, firstname: e.target.value }),
+      setData({ ...data, first_name: e.target.value }),
     handleChangeLastname = (e) =>
-      setData({ ...data, lastname: e.target.value }),
+      setData({ ...data, last_name: e.target.value }),
     handleChangeEmail = (e) => setData({ ...data, email: e.target.value }),
     handleChangeMessage = (e) => setData({ ...data, message: e.target.value });
 
