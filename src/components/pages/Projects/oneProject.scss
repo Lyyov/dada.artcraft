@@ -1,20 +1,18 @@
-@import "../../../style/variables.scss";
-
 .projall {
   &__section {
     padding: 80px 0;
-    border-bottom: 1px solid #1E1E23;
+    border-bottom: 1px solid #1e1e23;
     .row {
-      align-items: center;
       display: flex;
+      align-items: center;
     }
 
     &:nth-child(even) {
       .projall__right {
-        order: 1
+        order: 1;
       }
       .projall__left {
-        order: 2
+        order: 2;
       }
     }
   }
@@ -35,7 +33,7 @@
   &__domain {
     font-weight: 700;
     font-size: 21px;
-    color: #1E1E23;
+    color: #1e1e23;
     margin-bottom: 10px;
   }
   &__info {
@@ -44,12 +42,12 @@
     font-size: 16px;
     color: #636368;
     padding-top: 10px;
-    border-top: 2px solid #1E1E23;
+    border-top: 2px solid #1e1e23;
   }
   &__text {
     font-weight: 300;
     font-size: 16px;
-    color: #2C2C2C;
+    color: #2c2c2c;
     letter-spacing: 0.15px;
     text-align: justify;
     line-height: 24.88px;
@@ -69,9 +67,25 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    &__section {
+      padding: 40px 0;
+
+      .row {
+        display: block;
+      }
+    }
+    &__domain {
+      margin: 20px 0;
+    }
+
+    &__text,
+    &__button {
+      margin-top: 40px;
+    }
+  }
 }
-
-
 
 .project {
   background-color: #121212;
@@ -114,6 +128,24 @@
     text-align: justify;
     color: #696969;
     width: 70%;
+  }
+
+  @include respond_to(sm) {
+    &__section {
+      padding: 30px 0;
+    }
+    &__title {
+      font-size: 30px;
+      margin: 10px 0;
+
+      &-sub {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__text {
+      width: 100%;
+    }
   }
 }
 

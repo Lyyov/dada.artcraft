@@ -1,7 +1,4 @@
-@import "../../../style/variables.scss";
-
 .services {
-
   &__relative {
     position: relative;
     padding: 50px 0;
@@ -46,7 +43,7 @@
 
   &__mark {
     font-size: 21px;
-    color: #DDB407;
+    color: #ddb407;
     text-align: left;
     font-style: italic;
     margin-top: 60px;
@@ -63,7 +60,6 @@
   }
 
   &__do {
-    
     &-content {
       background-color: $black_bcg;
     }
@@ -75,7 +71,7 @@
     padding-bottom: 80px;
     &-item {
       position: relative;
-      transition: transform .3s ease;
+      transition: transform 0.3s ease;
 
       img {
         width: 100%;
@@ -113,18 +109,17 @@
     }
     &-text {
       font-size: 16px;
-      color: #312F35;
+      color: #312f35;
       letter-spacing: 0.18px;
       text-align: center;
       line-height: 22px;
       height: 44px;
       overflow: hidden;
-      transition: height .3s ease;
+      transition: height 0.3s ease;
     }
   }
 
   .borders {
-    
     &-top,
     &-bottom {
       height: 6px;
@@ -132,6 +127,53 @@
     &-right,
     &-left {
       width: 6px;
+    }
+  }
+
+  @include respond_to(sm) {
+    &__relative {
+      padding: 30px 0;
+    }
+    &__text {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+    &__paragraph,
+    &__mark {
+      padding: 0 15px;
+      margin-top: 30px;
+    }
+
+    &__banner {
+      display: none;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin: 30px 0;
+      padding: 0;
+      max-width: none;
+      padding-left: 15px;
+    }
+    &__list {
+      margin: -30px !important;
+      padding-bottom: 30px;
+
+      &-content {
+        padding: 0 15px;
+      }
+      &-item {
+        img {
+          max-height: 280px;
+        }
+        &:hover {
+          transform: scale(1);
+        }
+      }
+      &-text {
+        overflow: visible;
+        height: auto;
+      }
     }
   }
 }
@@ -169,7 +211,7 @@
   }
   &__item-text {
     font-size: 16px;
-    color: #312F35;
+    color: #312f35;
     letter-spacing: 0.18px;
     text-align: center;
     line-height: 22px;
@@ -232,7 +274,6 @@
   }
 
   &__slider {
-
     .slick-slide {
       opacity: 1;
     }
