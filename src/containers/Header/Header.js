@@ -78,6 +78,9 @@ const Header = () => {
           >
             <div className="burger-icon"></div>
           </button>
+          <Link className="header__logo header__logo-mobile logo" to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
       </div>
       {burger && backdrop()}

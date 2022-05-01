@@ -60,7 +60,7 @@ const Contact = () => {
       <div className="container">
         <h3 className="contact__title title">Let’s Talk</h3>
         <div className="row contact__row">
-          <div className="col-lg-5 col-md-6">
+          <div className="col-lg-5 col-md-6 col-12">
             <h5 className="contact__subtitle subtitle">
               How can we assist you?
             </h5>
@@ -166,7 +166,7 @@ const Contact = () => {
               </div>
             </form>
           </div>
-          <div className="col-lg-5 col-md-6">
+          <div className="col-lg-5 col-md-6 col-12">
             <h5 className="contact__subtitle right">You can find us at:</h5>
             <p className="contact__text">
               Our motivation helps to craft meaningful experiences for the

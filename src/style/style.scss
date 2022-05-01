@@ -84,6 +84,10 @@ h3 {
   color: $color_orange;
   text-align: center;
   font-weight: 700;
+
+  @include respond_to(sm) {
+    font-size: 30px;
+  }
 }
 
 .text-center {
