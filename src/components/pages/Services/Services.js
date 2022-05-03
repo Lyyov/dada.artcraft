@@ -186,7 +186,7 @@ const Services = () => {
                             d="M172,42 L177.920817,36.6788875 C177.971169,36.6334667 178,36.5683833 178,36.5 C178,36.4316167 177.971169,36.3665333 177.920817,36.3211125 L172,31"
                             id="Path"
                             stroke="#3A3A3A"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                           ></path>

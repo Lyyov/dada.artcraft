@@ -27,7 +27,7 @@
                         <use xlink:href="#path-1"></use>
                     </mask>
                     <g id="Clip-34"></g>
-                    <polygon id="Stroke-33" stroke="#DDB407" stroke-width="1.5" mask="url(#mask-2)" points="0.75 113.25 80.376 113.25 80.376 1.067 0.75 1.067"></polygon>
+                    <polygon id="Stroke-33" stroke="#DDB407" strokeWidth="1.5" mask="url(#mask-2)" points="0.75 113.25 80.376 113.25 80.376 1.067 0.75 1.067"></polygon>
                     <path d="M24.8475,55.8245 L28.3095,66.3025 L31.7715,55.8245 L24.8475,55.8245 Z M25.5765,78.3275 L14.9165,45.9855 L21.7495,45.9855 L24.3915,54.6855 L33.1315,54.6855 L25.5765,78.3275 Z" id="Fill-2" fill="#B5E2D2" mask="url(#mask-2)"></path>
                     <path d="M50.0277,34.6595 L46.5657,24.1825 L43.1027,34.6595 L50.0277,34.6595 Z M54.7127,12.6515 L65.3727,44.9935 L53.1247,44.4995 L39.8697,44.4995 L54.7127,12.6515 Z" id="Fill-1" fill="#DDB407" mask="url(#mask-2)"></path>
                 </g>
