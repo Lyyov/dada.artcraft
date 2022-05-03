@@ -1,5 +1,6 @@
 import "./style/style.scss";
 import { Switch } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
 // import { SmoothProvider } from 'react-smooth-scrolling';
 
 import Routes from "./routes/routes";
@@ -16,7 +17,9 @@ function App() {
 
       <Layout>
         <Switch>
-          <Routes />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes />
+          </Suspense>
         </Switch>
       </Layout>
 

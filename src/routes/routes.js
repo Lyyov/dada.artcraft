@@ -1,20 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, lazy } from "react";
 import { Route } from "react-router-dom";
-import {
-  Home,
-  Saula,
-  Sagro,
-  Projects,
-  Prgisc,
-  Mancomm,
-  Banners,
-  About,
-  Branding,
-  Services,
-  Contact,
-  Brief,
-  BeautyOffice,
-} from "../components/pages";
+const Home = lazy(() => import("../components/pages/Home/Home"));
+const Services = lazy(() => import("../components/pages/Services/Services"));
+const Saula = lazy(() => import("../components/pages/Projects/Saula"));
+const Sagro = lazy(() => import("../components/pages/Projects/Sagro"));
+const Mancomm = lazy(() => import("../components/pages/Projects/Mancomm"));
+const Banners = lazy(() => import("../components/pages/Projects/Banners"));
+const BeautyOffice = lazy(() =>
+  import("../components/pages/Projects/BeautyOffice")
+);
+const Projects = lazy(() => import("../components/pages/Projects/Projects"));
+const Prgisc = lazy(() => import("../components/pages/Projects/Prgisc"));
+import { About, Branding, Contact, Brief } from "../components/pages";
 
 const routes = [
   {
