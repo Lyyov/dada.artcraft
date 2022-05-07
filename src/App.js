@@ -17,7 +17,9 @@ function App() {
 
       <Layout>
         <Switch>
-          <Routes />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes />
+          </Suspense>
         </Switch>
       </Layout>
 
