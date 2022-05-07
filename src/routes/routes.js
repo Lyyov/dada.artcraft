@@ -1,16 +1,48 @@
 import React, { Fragment, lazy } from "react";
 import { Route } from "react-router-dom";
-const Home = lazy(() => import("../components/pages/Home/Home"));
-const Services = lazy(() => import("../components/pages/Services/Services"));
-const Saula = lazy(() => import("../components/pages/Projects/Saula"));
-const Sagro = lazy(() => import("../components/pages/Projects/Sagro"));
-const Mancomm = lazy(() => import("../components/pages/Projects/Mancomm"));
-const Banners = lazy(() => import("../components/pages/Projects/Banners"));
-const BeautyOffice = lazy(() =>
-  import("../components/pages/Projects/BeautyOffice")
+const Home = lazy(() =>
+  import(/* webpackChunkName: "[request]" */ "../components/pages/Home/Home")
 );
-const Projects = lazy(() => import("../components/pages/Projects/Projects"));
-const Prgisc = lazy(() => import("../components/pages/Projects/Prgisc"));
+const Services = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Services/Services"
+  )
+);
+const Saula = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Saula"
+  )
+);
+const Sagro = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Sagro"
+  )
+);
+const Mancomm = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Mancomm"
+  )
+);
+const Banners = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Banners"
+  )
+);
+const BeautyOffice = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/BeautyOffice"
+  )
+);
+const Projects = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Projects"
+  )
+);
+const Prgisc = lazy(() =>
+  import(
+    /* webpackChunkName: "[request]" */ "../components/pages/Projects/Prgisc"
+  )
+);
 import { About, Branding, Contact, Brief } from "../components/pages";
 
 const routes = [
