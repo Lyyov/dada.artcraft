@@ -1,4 +1,4 @@
-import React, { Fragment, lazy } from "react";
+import React, { Fragment, lazy, Suspense } from "react";
 import { Route } from "react-router-dom";
 const Home = lazy(() =>
   import(/* webpackChunkName: "Home" */ "../components/pages/Home/Home")
