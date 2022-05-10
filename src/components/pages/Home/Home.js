@@ -1,12 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
 // import Modal from "../../UI/Modal/Modal";
 
 import poorgif from "../../../assets/svg/pour-gif.gif";
-// import sagro from "../../../assets/sagro/banner.jpg";
-// import prciscLogo from "../../../assets/prcisc/logo.svg";
 
 // import sculpture from "../../../assets/production/slider-portofolio/sculpture.png";
 import dadastationare from "../../../assets/blog/DaDaStationary011.jpg";
@@ -14,22 +13,31 @@ import dadastationare from "../../../assets/blog/DaDaStationary011.jpg";
 const Home = () => {
   const nav = [
     {
-      text: "Bloc 1",
+      text: "",
+      src: process.env.PUBLIC_URL + "/assets/sagro/cover.jpg",
+      to: "/sagro",
     },
     {
-      text: "Bloc 2",
+      text: "",
+      src: process.env.PUBLIC_URL + "/assets/pr_gisc/cover.jpg",
+      to: "/prgisc",
     },
     {
-      text: "Bloc 3",
+      text: "",
       src: poorgif,
+      to: "/",
     },
     {
-      text: "Bloc 4",
+      text: "",
+      src: process.env.PUBLIC_URL + "/assets/saula/cover.jpg",
+      to: "/saula",
     },
   ];
-  const navItems = nav.map(({ text, src }) => (
+  const navItems = nav.map(({ text, src, to }) => (
     <div className="sliderPortofolio__nav-item" key={text}>
-      <p className="sliderPortofolio__nav-text">{text}</p>
+      <Link to={to} className="sliderPortofolio__nav-text">
+        {text}
+      </Link>
       <div className="sliderPortofolio__nav-img">
         {src && <img src={src} />}
       </div>
