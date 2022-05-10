@@ -97,6 +97,16 @@
   .slick-track {
     height: 100%;
   }
+
+  @include respond_to(sm) {
+    max-height: 60vh;
+    &__image-container {
+      max-height: 60vh;
+    }
+    &__nav {
+      position: relative;
+    }
+  }
 }
 
 .sliderPortofolio {

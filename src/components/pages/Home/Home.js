@@ -5,7 +5,7 @@ import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
 // import Modal from "../../UI/Modal/Modal";
 
-import poorgif from "../../../assets/svg/pour-gif.gif";
+// import poorgif from "../../../assets/svg/pour-gif.gif";
 
 // import sculpture from "../../../assets/production/slider-portofolio/sculpture.png";
 import dadastationare from "../../../assets/blog/DaDaStationary011.jpg";
@@ -24,8 +24,8 @@ const Home = () => {
     },
     {
       text: "",
-      src: poorgif,
-      to: "/",
+      src: process.env.PUBLIC_URL + "/assets/mancomm/cover.jpg",
+      to: "/mancomm",
     },
     {
       text: "",
@@ -52,46 +52,6 @@ const Home = () => {
           <img src={dadastationare} alt="" />
         </div>
 
-        <Slider
-          className="sliderPortofolio__nav"
-          customSettings={{
-            dots: true,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            initialSlide: 0,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true,
-                },
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1,
-                  initialSlide: 3,
-                },
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  initialSlide: 3,
-                },
-              },
-            ],
-          }}
-        >
-          {navItems}
-        </Slider>
         <Slider
           className="sliderPortofolio"
           customSettings={{
@@ -167,6 +127,38 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </Slider>
+        <Slider
+          className="sliderPortofolio__nav"
+          customSettings={{
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                },
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ],
+          }}
+        >
+          {navItems}
         </Slider>
       </div>
       {/* <div className="slider-container">
