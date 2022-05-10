@@ -147,10 +147,11 @@
   @include respond_to(sm) {
     &__content {
       padding: 40px 0;
+      border: 0;
     }
     &__form {
       width: 100%;
-      padding: 0 15px;
+      padding: 0;
     }
     &__text {
       margin: 30px 0;
