@@ -17,6 +17,7 @@ const OneProject = () => {
             <div className="col-md-6 col-12 projall__left">
               <Link to={to} className="projall__image">
                 <img
+                  loading="lazy"
                   className="projall__iamge-image"
                   src={`${process.env.PUBLIC_URL}${cover}`}
                   alt={`cover for ${name}`}

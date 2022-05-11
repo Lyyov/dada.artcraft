@@ -61,7 +61,7 @@ const Services = () => {
   const services = servicesApi.map((item) => (
     <div className="col-md-3" key={item.title}>
       <div className="services__list-item">
-        <img src={item.img} alt="service" />
+        <img loading="lazy" src={item.img} alt="service" />
         <div className="services__list-content">
           <div className="services__list-title">{item.title}</div>
           <p className="services__list-text">{item.text}</p>
@@ -100,7 +100,12 @@ const Services = () => {
   return (
     <div className="services" id="services">
       <section className="services__relative">
-        <img className="services__banner" src={headerbanner} alt="banner" />
+        <img
+          loading="lazy"
+          className="services__banner"
+          src={headerbanner}
+          alt="banner"
+        />
         <div className={`services__text`}>
           {/* <h3 className="services__title title">Services</h3> */}
           <p className="services__paragraph">
@@ -209,7 +214,12 @@ const Services = () => {
           </div>
           <div className="row know__row">
             <div className="col-md-6 col-sm-12">
-              <img className="know__image" src={goodToKnow} alt="" />
+              <img
+                loading="lazy"
+                className="know__image"
+                src={goodToKnow}
+                alt=""
+              />
             </div>
             <div className="col-md-6 col-sm-12">
               <Slider
