@@ -20,3 +20,16 @@ $black_bcg: #1e1e23;
 
 $header_height: 50px;
 $header_bcg: $black_bcg;
+
+// resonsive themes
+
+$fz_title: 50px;
+$fz_sub_title: 24px;
+$fz_button: 18px;
+$fz_text: 16px;
+
+@media only screen and (max-width: 767px) {
+  $fz_title: 30px;
+  $fz_sub_title: 20px;
+  $fz_button: 16px;
+}

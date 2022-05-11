@@ -72,7 +72,7 @@ const Services = () => {
   const howItwork = howItWorkApi.map((item) => (
     <div className="col-lg-3 col-md-3">
       <div className="howWork__item">
-        <h5 className="howWork__item-title">{item.title}</h5>
+        <h3 className="howWork__item-title">{item.title}</h3>
         <p className="howWork__item-text">{item.text}</p>
       </div>
     </div>
