@@ -51,7 +51,6 @@ const Home = () => {
           {/* <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding1.jpg'}  alt="" />  */}
           <img src={dadastationare} alt="" />
         </div>
-
         <Slider
           className="sliderPortofolio"
           customSettings={{
