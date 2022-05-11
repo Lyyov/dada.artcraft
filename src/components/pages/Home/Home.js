@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 
 import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
-// import Modal from "../../UI/Modal/Modal";
-
-// import poorgif from "../../../assets/svg/pour-gif.gif";
-
-// import sculpture from "../../../assets/production/slider-portofolio/sculpture.png";
-import dadastationare from "../../../assets/blog/DaDaStationary011.jpg";
 
 const Home = () => {
+  const mainSliderImg = process.env.PUBLIC_URL + "/assets/home/homepage.jpg";
   const nav = [
     {
       text: "",
@@ -49,7 +44,7 @@ const Home = () => {
       <div className="slider-container">
         <div className="sliderPortofolio__image-container image-container">
           {/* <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding1.jpg'}  alt="" />  */}
-          <img src={dadastationare} alt="" />
+          <img src={mainSliderImg} alt="" />
         </div>
         <Slider
           className="sliderPortofolio"
