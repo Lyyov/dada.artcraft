@@ -90,6 +90,23 @@ h3 {
   }
 }
 
+p {
+  font-size: $fz_text;
+  color: $color_main;
+  text-align: justify;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+section {
+  padding: 50px 0;
+  margin-bottom: 80px;
+
+  @include respond_to(sm) {
+    padding: 30px 0;
+  }
+}
+
 .text-center {
   text-align: center;
 }

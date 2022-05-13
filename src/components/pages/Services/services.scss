@@ -1,8 +1,6 @@
 .services {
   &__relative {
     position: relative;
-    padding: 50px 0;
-    margin-bottom: 80px;
     background-color: $black_bcg;
   }
   &__text {
@@ -24,21 +22,15 @@
   }
 
   &__paragraph {
-    color: $color_main;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 32px;
     margin-top: 60px;
-    font-weight: 300;
     max-width: 470px;
-    text-align: justify;
     padding: 0 80px;
     padding-left: 0;
   }
 
   &__mark {
     font-size: 21px;
-    color: #ddb407;
+    color: $color_orange;
     text-align: left;
     font-style: italic;
     margin-top: 60px;
@@ -94,7 +86,7 @@
     }
     &-title {
       font-weight: 600;
-      font-size: 21px;
+      font-size: $fz_sub_title;
       color: $color_orange;
       border-bottom: 1px solid #979797;
       width: 100%;
@@ -114,26 +106,12 @@
     }
   }
 
-  .borders {
-    &-top,
-    &-bottom {
-      height: 6px;
-    }
-    &-right,
-    &-left {
-      width: 6px;
-    }
-  }
-
   @include respond_to(sm) {
     &__do .container {
       padding: 0;
     }
     &__do-content {
       padding: 0 15px;
-    }
-    &__relative {
-      padding: 30px 0;
     }
     &__text {
       width: 100%;
@@ -150,7 +128,6 @@
     }
 
     &__title {
-      margin: 30px 0;
       padding: 0;
       max-width: none;
       padding-left: 15px;
@@ -200,7 +177,7 @@
   }
   &__item-title {
     font-weight: 600;
-    font-size: 21px;
+    font-size: $fz_sub_title;
     color: $color_black;
     border-bottom: 1px solid #979797;
     width: 100%;
