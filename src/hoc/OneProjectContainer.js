@@ -37,7 +37,11 @@ const withProjectContainer = (ThisComponent, name) => (props) => {
   const zoomItems = project.images.map((item, key) => {
     return (
       <div key={key}>
-        <img src={`${process.env.PUBLIC_URL}${item.src}`} alt={item.alt} />
+        <img
+          loading="lazy"
+          src={`${process.env.PUBLIC_URL}${item.src}`}
+          alt={item.alt}
+        />
       </div>
     );
   });

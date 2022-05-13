@@ -86,7 +86,10 @@ const Contact = () => {
                       name="first_name"
                       id="first_name"
                     />
-                    <label className="input-container__label" for="first_name">
+                    <label
+                      className="input-container__label"
+                      htmlFor="first_name"
+                    >
                       first name
                     </label>
                   </div>
@@ -106,7 +109,10 @@ const Contact = () => {
                       name="last_name"
                       id="last_name"
                     />
-                    <label className="input-container__label" for="last_name">
+                    <label
+                      className="input-container__label"
+                      htmlFor="last_name"
+                    >
                       last name
                     </label>
                   </div>
@@ -126,7 +132,7 @@ const Contact = () => {
                       name="email"
                       id="email"
                     />
-                    <label className="input-container__label" for="email">
+                    <label className="input-container__label" htmlFor="email">
                       Email
                     </label>
                   </div>
@@ -146,7 +152,7 @@ const Contact = () => {
                       name="message"
                       id="message"
                     />
-                    <label className="input-container__label" for="message">
+                    <label className="input-container__label" htmlFor="message">
                       Message
                     </label>
                   </div>
@@ -227,9 +233,9 @@ const Contact = () => {
                       >
                         <text
                           id="Apply"
-                          font-family="OpenSans-SemiBold, Open Sans"
+                          fontFamily="OpenSans-SemiBold, Open Sans"
                           fontSize="21"
-                          font-weight="500"
+                          fontWeight="500"
                           fill="#312F35"
                         >
                           <tspan x="102" y="43">
@@ -241,8 +247,8 @@ const Contact = () => {
                           id="Path"
                           stroke="#3A3A3A"
                           strokeWidth="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </g>
                     </g>

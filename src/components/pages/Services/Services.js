@@ -61,7 +61,7 @@ const Services = () => {
   const services = servicesApi.map((item) => (
     <div className="col-md-3" key={item.title}>
       <div className="services__list-item">
-        <img src={item.img} alt="service" />
+        <img loading="lazy" src={item.img} alt="service" />
         <div className="services__list-content">
           <div className="services__list-title">{item.title}</div>
           <p className="services__list-text">{item.text}</p>
@@ -70,7 +70,7 @@ const Services = () => {
     </div>
   ));
   const howItwork = howItWorkApi.map((item) => (
-    <div className="col-lg-3 col-md-3">
+    <div className="col-lg-3 col-md-8 col-sm-12" key={item.title}>
       <div className="howWork__item">
         <h3 className="howWork__item-title">{item.title}</h3>
         <p className="howWork__item-text">{item.text}</p>
@@ -92,7 +92,7 @@ const Services = () => {
     },
   ];
   const knowItems = goodToKnowApi.map((item) => (
-    <div className="know__item">
+    <div className="know__item" key={item.title}>
       <h5 className="know__item-title">{item.title}</h5>
       <p className="know__item-text">{item.text}</p>
     </div>
@@ -100,7 +100,12 @@ const Services = () => {
   return (
     <div className="services" id="services">
       <section className="services__relative">
-        <img className="services__banner" src={headerbanner} alt="banner" />
+        <img
+          loading="lazy"
+          className="services__banner"
+          src={headerbanner}
+          alt="banner"
+        />
         <div className={`services__text`}>
           {/* <h3 className="services__title title">Services</h3> */}
           <p className="services__paragraph">
@@ -173,9 +178,9 @@ const Services = () => {
                         >
                           <text
                             id="Apply"
-                            font-family="OpenSans-SemiBold, Open Sans"
+                            fontFamily="OpenSans-SemiBold, Open Sans"
                             fontSize="21"
-                            font-weight="500"
+                            fontWeight="500"
                             fill="#312F35"
                           >
                             <tspan x="102" y="43">
@@ -187,8 +192,8 @@ const Services = () => {
                             id="Path"
                             stroke="#3A3A3A"
                             strokeWidth="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           ></path>
                         </g>
                       </g>
@@ -208,10 +213,15 @@ const Services = () => {
             </div>
           </div>
           <div className="row know__row">
-            <div className="col-md-6">
-              <img className="know__image" src={goodToKnow} alt="" />
+            <div className="col-md-6 col-sm-12">
+              <img
+                loading="lazy"
+                className="know__image"
+                src={goodToKnow}
+                alt=""
+              />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <Slider
                 className="know__slider"
                 customSettings={{

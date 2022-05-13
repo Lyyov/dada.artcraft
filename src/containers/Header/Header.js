@@ -66,7 +66,7 @@ const Header = () => {
               {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
             <Link className="header__logo logo" to="/">
-              <img src={logo} alt="logo" />
+              <img loading="lazy" src={logo} alt="logo" />
               {/* dada
                 <br/>
                 art.craft */}
@@ -79,7 +79,7 @@ const Header = () => {
             <div className="burger-icon"></div>
           </button>
           <Link className="header__logo header__logo-mobile logo" to="/">
-            <img src={logo} alt="logo" />
+            <img loading="lazy" src={logo} alt="logo" />
           </Link>
         </div>
       </div>

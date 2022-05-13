@@ -87,7 +87,10 @@ const Brief = () => {
                 name="brief_first_name"
                 id="brief_first_name"
               />
-              <label className="input-container__label" for="brief_first_name">
+              <label
+                className="input-container__label"
+                htmlFor="brief_first_name"
+              >
                 Your name
               </label>
             </div>
@@ -105,7 +108,7 @@ const Brief = () => {
                 name="company"
                 id="company"
               />
-              <label className="input-container__label" for="company">
+              <label className="input-container__label" htmlFor="company">
                 Organization/Company
               </label>
             </div>
@@ -123,7 +126,7 @@ const Brief = () => {
                 name="phone"
                 id="phone"
               />
-              <label className="input-container__label" for="phone">
+              <label className="input-container__label" htmlFor="phone">
                 Phone
               </label>
             </div>
@@ -141,7 +144,7 @@ const Brief = () => {
                 name="brief_email"
                 id="brief_email"
               />
-              <label className="input-container__label" for="brief_email">
+              <label className="input-container__label" htmlFor="brief_email">
                 E-mail
               </label>
             </div>
@@ -160,7 +163,7 @@ const Brief = () => {
                 name="services"
                 id="services"
               />
-              <label className="input-container__label" for="services">
+              <label className="input-container__label" htmlFor="services">
                 What services are you interested in ?
               </label>
             </div>
@@ -179,7 +182,7 @@ const Brief = () => {
                 name="project"
                 id="project"
               />
-              <label className="input-container__label" for="project">
+              <label className="input-container__label" htmlFor="project">
                 Describe your project.
               </label>
             </div>
@@ -198,7 +201,7 @@ const Brief = () => {
                 name="deadlines"
                 id="deadlines"
               />
-              <label className="input-container__label" for="deadlines">
+              <label className="input-container__label" htmlFor="deadlines">
                 Deadlines
               </label>
             </div>

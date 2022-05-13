@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 
 import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
-// import Modal from "../../UI/Modal/Modal";
-
-import poorgif from "../../../assets/svg/pour-gif.gif";
-
-// import sculpture from "../../../assets/production/slider-portofolio/sculpture.png";
-import dadastationare from "../../../assets/blog/DaDaStationary011.jpg";
 
 const Home = () => {
+  const mainSliderImg = process.env.PUBLIC_URL + "/assets/home/homepage.jpg";
   const nav = [
     {
       text: "",
@@ -24,8 +19,8 @@ const Home = () => {
     },
     {
       text: "",
-      src: poorgif,
-      to: "/",
+      src: process.env.PUBLIC_URL + "/assets/mancomm/cover.jpg",
+      to: "/mancomm",
     },
     {
       text: "",
@@ -39,7 +34,7 @@ const Home = () => {
         {text}
       </Link>
       <div className="sliderPortofolio__nav-img">
-        {src && <img src={src} />}
+        {src && <img loading="lazy" src={src} />}
       </div>
     </div>
   ));
@@ -48,49 +43,9 @@ const Home = () => {
     <Aux>
       <div className="slider-container">
         <div className="sliderPortofolio__image-container image-container">
-          {/* <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding1.jpg'}  alt="" />  */}
-          <img src={dadastationare} alt="" />
+          {/* <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding1.jpg'}  alt="" />  */}
+          <img loading="lazy" src={mainSliderImg} alt="" />
         </div>
-        <Slider
-          className="sliderPortofolio__nav"
-          customSettings={{
-            dots: true,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            initialSlide: 0,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true,
-                },
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1,
-                  initialSlide: 3,
-                },
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  initialSlide: 3,
-                },
-              },
-            ],
-          }}
-        >
-          {navItems}
-        </Slider>
         <Slider
           className="sliderPortofolio"
           customSettings={{
@@ -114,7 +69,7 @@ const Home = () => {
           </div>
           <div className="sliderPortofolio__item">
             {/* <div className="sliderPortofolio__image-container image-container">
-              <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding2.jpg'}  alt="" /> 
+              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding2.jpg'}  alt="" /> 
             </div> */}
             <div className={`sliderPortofolio__content`}>
               <div className={`sliderPortofolio__text`}>
@@ -128,7 +83,7 @@ const Home = () => {
           </div>
           <div className="sliderPortofolio__item">
             {/* <div className="sliderPortofolio__image-container image-container">
-              <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding3.jpg'}  alt="" /> 
+              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding3.jpg'}  alt="" /> 
             </div> */}
             <div className={`sliderPortofolio__content`}>
               <div className={`sliderPortofolio__text`}>
@@ -142,7 +97,7 @@ const Home = () => {
           </div>
           <div className="sliderPortofolio__item">
             {/* <div className="sliderPortofolio__image-container image-container">
-              <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web1.jpg'}  alt="" /> 
+              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web1.jpg'}  alt="" /> 
             </div> */}
             <div className={`sliderPortofolio__content`}>
               <div className={`sliderPortofolio__text`}>
@@ -156,7 +111,7 @@ const Home = () => {
           </div>
           <div className="sliderPortofolio__item">
             {/* <div className="sliderPortofolio__image-container image-container">
-              <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web2.jpg'}  alt="" /> 
+              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web2.jpg'}  alt="" /> 
             </div> */}
             <div className={`sliderPortofolio__content`}>
               <div className={`sliderPortofolio__text`}>
@@ -167,81 +122,39 @@ const Home = () => {
             </div>
           </div>
         </Slider>
-      </div>
-      {/* <div className="slider-container">
-        
-        <Slider className="sliderServices">
-          <div className="sliderServices__item">
-            <div className="sliderServices__image-container image-container">
-              <img className="imgage-container_image" src={sculpture} alt="" /> 
-            </div>
-            <div className={`sliderServices__content`}>
-              <div className={`sliderServices__text`}>
-                <ul className="borders">
-                  <li className="borders__line borders-left"></li>
-                  <li className="borders__line borders-top"></li>
-                  <li className="borders__line borders-right"></li>
-                  <li className="borders__line borders-bottom"></li>
-                </ul>
-                <h3 className="sliderServices__title-absolute">
-                  Portofolio
-                </h3>
-                <div className={`sliderServices__title`}>Branding projects</div>
-                <Link to="/branding">
-                  <button className="button sliderServices__button">
-                    <span>See full projects</span>
-                  </button>
-                </Link>
-                
-              </div>
-            </div>
-          </div>
-          <div className="sliderServices__item sliderServices__item-sagro">
-            <div className="sliderServices__image-container image-container">
-              <img className="imgage-container_image" src={sagro} alt="" /> 
-            </div>
-            <div className={`sliderServices__content`}>
-              <div className={`sliderServices__text`}>
-                <ul className="borders">
-                  <li className="borders__line borders-left"></li>
-                  <li className="borders__line borders-top"></li>
-                  <li className="borders__line borders-right"></li>
-                  <li className="borders__line borders-bottom"></li>
-                </ul>
-                <h3 className="sliderServices__title-absolute">
-                  <img src="https://sagro.md/wp-content/uploads/2020/04/Sagro-svg4.svg" alt=""/>
-                </h3>
-                <div className={`sliderServices__title`}>Agriculture</div>
-                <button className="button sliderServices__button">
-                  <span>Checkout</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="sliderServices__item">
-            <div className="sliderServices__image-container image-container">
-              <img className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/saula/saula1.jpg'} alt="" /> 
-            </div>
-            <div className={`sliderServices__content`}>
-              <div className={`sliderServices__text`}>
-                <ul className="borders">
-                  <li className="borders__line borders-left"></li>
-                  <li className="borders__line borders-top"></li>
-                  <li className="borders__line borders-right"></li>
-                  <li className="borders__line borders-bottom"></li>
-                </ul>
-                <h3 className="sliderServices__title-absolute">
-                  <img src={process.env.PUBLIC_URL + '/assets/saula/logo.svg'} alt=""/>
-                </h3>
-                <div className={`sliderServices__title`}>Coffee Shop</div>
-                <button className="button sliderServices__button">
-                  <span>Checkout</span>
-                </button>
-              </div>
-            </div>
-          </div>
+        <Slider
+          className="sliderPortofolio__nav"
+          customSettings={{
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                },
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ],
+          }}
+        >
+          {navItems}
         </Slider>
-      </div> */}
+      </div>
     </Aux>
   );
 };
