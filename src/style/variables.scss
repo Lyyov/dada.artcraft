@@ -23,13 +23,13 @@ $header_bcg: $black_bcg;
 
 // resonsive themes
 
+//desk
 $fz_title: 50px;
 $fz_sub_title: 24px;
 $fz_button: 18px;
 $fz_text: 16px;
 
-@media only screen and (max-width: 767px) {
-  $fz_title: 30px;
-  $fz_sub_title: 20px;
-  $fz_button: 16px;
-}
+//mobile
+$fz_sm_title: 30px;
+$fz_sm_sub_title: 20px;
+$fz_sm_button: 16px;

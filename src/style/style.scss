@@ -82,6 +82,12 @@ h3 {
   color: $color_orange;
   text-align: center;
   font-weight: 700;
+  margin: 40px 0;
+
+  @include respond_to(sm) {
+    font-size: $fz_sm_title;
+    margin: 30px 0;
+  }
 }
 
 .text-center {
