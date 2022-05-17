@@ -1,43 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
+import NavSlider from "../../NavSlider/NavSlider";
 
 const Home = () => {
   const mainSliderImg = process.env.PUBLIC_URL + "/assets/home/homepage.jpg";
-  const nav = [
-    {
-      text: "",
-      src: process.env.PUBLIC_URL + "/assets/sagro/cover.jpg",
-      to: "/sagro",
-    },
-    {
-      text: "",
-      src: process.env.PUBLIC_URL + "/assets/pr_gisc/cover.jpg",
-      to: "/prgisc",
-    },
-    {
-      text: "",
-      src: process.env.PUBLIC_URL + "/assets/mancomm/cover.jpg",
-      to: "/mancomm",
-    },
-    {
-      text: "",
-      src: process.env.PUBLIC_URL + "/assets/saula/cover.jpg",
-      to: "/saula",
-    },
-  ];
-  const navItems = nav.map(({ text, src, to }) => (
-    <div className="sliderPortofolio__nav-item" key={text}>
-      <Link to={to} className="sliderPortofolio__nav-text">
-        {text}
-      </Link>
-      <div className="sliderPortofolio__nav-img">
-        {src && <img loading="lazy" src={src} />}
-      </div>
-    </div>
-  ));
+  const mainSliderSettings = {
+    fade: true,
+    speed: 2500,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    pauseOnHover: false,
+    dots: false,
+  };
 
   return (
     <Aux>
@@ -48,13 +24,7 @@ const Home = () => {
         </div>
         <Slider
           className="sliderPortofolio"
-          customSettings={{
-            fade: true,
-            speed: 2500,
-            autoplay: true,
-            autoplaySpeed: 10000,
-            pauseOnHover: false,
-          }}
+          customSettings={mainSliderSettings}
         >
           <div className="sliderPortofolio__item">
             <div className={`sliderPortofolio__content`}>
@@ -122,39 +92,8 @@ const Home = () => {
             </div>
           </div>
         </Slider>
-        <Slider
-          className="sliderPortofolio__nav"
-          customSettings={{
-            infinite: true,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            initialSlide: 0,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                },
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                },
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                },
-              },
-            ],
-          }}
-        >
-          {navItems}
-        </Slider>
       </div>
+      <NavSlider />
     </Aux>
   );
 };

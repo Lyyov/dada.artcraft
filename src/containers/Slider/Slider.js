@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import react from "react";
 
 // import SliderItem from "./SliderItem";
 
@@ -30,7 +31,7 @@ function arrow(classNameNav, onClick) {
           <g
             id="Desktop-HD"
             transform="translate(-1368.000000, -2801.000000)"
-            stroke="#3A3A3A"
+            stroke="#ffffff"
             strokeWidth="1.5"
           >
             <path
@@ -54,24 +55,34 @@ function SamplePrevArrow(props) {
   return arrow("slider__custom-nav-prev", onClick);
 }
 
-const slider = (props) => {
-  const { className, customSettings } = props;
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    ...customSettings,
+class SliderContainer extends react.Component {
+  state = {
+    settings: {
+      dots: true,
+      infinite: true,
+      speed: 1500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+    },
   };
-  console.log(className, settings);
-  return (
-    <Slider {...settings} className={`slider ${className}`}>
-      {props.children}
-    </Slider>
-  );
-};
+  render() {
+    const { customSettings, className, children } = this.props;
 
-export default slider;
+    let settings = {
+      ...this.state.settings,
+      ...customSettings,
+    };
+
+    console.log(settings);
+
+    return (
+      <Slider {...settings} className={`slider ${className}`}>
+        {children}
+      </Slider>
+    );
+  }
+}
+
+export default SliderContainer;

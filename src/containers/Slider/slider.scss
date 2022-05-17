@@ -1,13 +1,19 @@
+$height: 28vh;
 .slider-container {
   position: relative;
+  height: calc(100vh - 50px - #{$height});
+
+  .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .sliderPortofolio,
 .sliderServices {
-  height: calc(100vh - 50px);
-  width: 100%;
-  position: relative;
-
   &__content {
     position: absolute;
     left: 0;
@@ -25,9 +31,8 @@
   }
 
   &__image-container {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 50px - #{$height});
     width: 100%;
-    position: absolute;
 
     img {
       object-fit: cover;
@@ -37,16 +42,8 @@
     }
   }
   &__nav {
-    $height: 25vh;
-    position: absolute;
-    bottom: 0;
     height: $height;
-    left: 0;
-    right: 0;
     background-color: $black_bcg;
-    z-index: 5;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
 
     &-item {
       border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
@@ -118,10 +115,6 @@
         &:hover img {
           transform: scale(1);
         }
-      }
-      img {
-        width: calc(100% - 30px);
-        margin: auto;
       }
     }
   }
@@ -264,6 +257,24 @@ $height: 36px;
   }
   .slick-slide > div {
     height: 100%;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $color_main;
+    }
+
+    li.slick-active button {
+      background-color: rgba($color: $color_hover, $alpha: 0.7);
+    }
   }
 }
 
