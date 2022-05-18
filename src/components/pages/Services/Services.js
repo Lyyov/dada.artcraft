@@ -176,17 +176,6 @@ const Services = () => {
                           id="buton"
                           transform="translate(528.000000, 363.000000)"
                         >
-                          <text
-                            id="Apply"
-                            fontFamily="OpenSans-SemiBold, Open Sans"
-                            fontSize="21"
-                            fontWeight="500"
-                            fill="#312F35"
-                          >
-                            <tspan x="102" y="43">
-                              Apply
-                            </tspan>
-                          </text>
                           <path
                             d="M172,42 L177.920817,36.6788875 C177.971169,36.6334667 178,36.5683833 178,36.5 C178,36.4316167 177.971169,36.3665333 177.920817,36.3211125 L172,31"
                             id="Path"

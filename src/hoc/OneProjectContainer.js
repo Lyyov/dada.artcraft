@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Slider from "../containers/Slider/Slider";
+import NavSlider from "../components/NavSlider/NavSlider";
 import Modal from "../components/UI/Modal/Modal";
 import Aux from "../hoc/Auxjs";
 
@@ -36,7 +37,7 @@ const withProjectContainer = (ThisComponent, name) => (props) => {
 
   const zoomItems = project.images.map((item, key) => {
     return (
-      <div key={key}>
+      <div key={key} className="modal__image-container">
         <img
           loading="lazy"
           src={`${process.env.PUBLIC_URL}${item.src}`}
@@ -55,6 +56,7 @@ const withProjectContainer = (ThisComponent, name) => (props) => {
               fade: true,
               initialSlide: initialSlide,
               speed: 500,
+              dots: false,
             }}
           >
             {zoomItems}
@@ -62,6 +64,7 @@ const withProjectContainer = (ThisComponent, name) => (props) => {
         </Modal>
       ) : null}
       <ThisComponent project={project} zoomHandler={zoomHandler} {...props} />
+      <NavSlider />
     </Aux>
   );
 };

@@ -1,6 +1,5 @@
 .projall {
   &__section {
-    padding: 80px 0;
     border-bottom: 1px solid #1e1e23;
     .row {
       display: flex;
@@ -32,30 +31,26 @@
   }
   &__domain {
     font-weight: 700;
-    font-size: 21px;
-    color: #1e1e23;
+    font-size: $fz_sm_title;
+    color: $color_black;
     margin-bottom: 10px;
   }
   &__info {
     font-weight: 600;
     font-style: italic;
-    font-size: 16px;
+    font-size: $fz_sm_button;
     color: #636368;
     padding-top: 10px;
     border-top: 2px solid #1e1e23;
   }
   &__text {
     font-weight: 300;
-    font-size: 16px;
-    color: #2c2c2c;
     letter-spacing: 0.15px;
-    text-align: justify;
-    line-height: 24.88px;
-    margin-top: 60px;
+    color: $color_black;
   }
 
   &__button {
-    margin-top: 60px;
+    margin-top: 30px;
 
     &:hover {
       background-color: $black_bcg;
@@ -68,49 +63,47 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond_to(md) {
     &__section {
-      padding: 40px 0;
-
       .row {
         display: block;
       }
     }
     &__domain {
       margin: 20px 0;
+      font-size: $fz_sm_sub_title;
     }
 
     &__text,
     &__button {
-      margin-top: 40px;
+      margin-top: 30px;
     }
   }
 }
 
 .project {
   background-color: #121212;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   &__container {
     max-width: 1200px;
     width: 90vw;
     margin: auto;
   }
+
   &__section {
-    padding: 60px 0px;
-  }
-  &__section-pad0 {
-    padding: 0 0px;
+    padding-top: 0 !important;
   }
   &__title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
     line-height: 1.4;
     font-family: $font_advent;
     font-weight: 400;
     letter-spacing: 3px;
+    margin-top: 70px;
     color: #a4a4a4;
+    margin-bottom: 20px;
   }
   &__title-sub {
     text-transform: none;
@@ -122,24 +115,17 @@
     color: #a4a4a4;
   }
   &__text {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 20px auto;
-    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 20px;
     color: #696969;
     width: 70%;
   }
 
   @include respond_to(sm) {
-    &__section {
-      padding: 30px 0;
-    }
     &__title {
-      font-size: 30px;
-      margin: 10px 0;
-
+      margin-bottom: 10px;
       &-sub {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
 

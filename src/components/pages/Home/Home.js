@@ -13,6 +13,14 @@ const Home = () => {
     autoplaySpeed: 10000,
     pauseOnHover: false,
     dots: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+        },
+      },
+    ],
   };
 
   return (
