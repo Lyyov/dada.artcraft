@@ -133,6 +133,10 @@ a:hover {
 main {
   min-height: 600px;
   padding-top: $header_height;
+
+  @include respond_to(sm) {
+    min-height: auto;
+  }
 }
 
 .blocked {

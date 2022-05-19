@@ -10,6 +10,7 @@ const NavSlider = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     dots: false,
+    arrows: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -18,15 +19,11 @@ const NavSlider = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
+          variableWidth: true,
+          variableHeight: true,
         },
       },
     ],

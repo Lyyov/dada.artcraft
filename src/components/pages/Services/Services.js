@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import Slider from "../../../containers/Slider/Slider";
@@ -146,7 +147,7 @@ const Services = () => {
           </div>
           <div className="row howWork__row">{howItwork}</div>
           <div className="text-center">
-            <a href="#" className="howWork__button button">
+            <Link to="/contacts" className="howWork__button button">
               <span>Apply</span>
               <span className="button__icon">
                 <svg
@@ -190,7 +191,7 @@ const Services = () => {
                   </g>
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

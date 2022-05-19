@@ -105,12 +105,30 @@ $height: 28vh;
     &__nav {
       position: relative;
       margin: 15px 0;
+      margin-left: 15px;
+      height: auto;
+      background-color: transparent;
       &-item {
         background-color: $color_main;
+        height: 100%;
+        border: 0;
+        img {
+          width: 130px;
+          height: 100px;
+        }
 
         &:hover img {
           transform: scale(1);
         }
+      }
+
+      .slick-slide {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .slick-track {
+        display: flex;
       }
     }
   }
