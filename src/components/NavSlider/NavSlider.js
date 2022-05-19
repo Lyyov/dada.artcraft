@@ -24,6 +24,7 @@ const NavSlider = () => {
           slidesToShow: 3,
           variableWidth: true,
           variableHeight: true,
+          swipeToSlide: true,
         },
       },
     ],
@@ -61,13 +62,40 @@ const NavSlider = () => {
     </div>
   ));
 
+  let startX = 0;
+
+  const swipeAction = (event) => {
+    const { type } = event;
+    const { screenX } = event.changedTouches[0];
+    const threshold = 20;
+
+    if (type === "touchstart") {
+      startX = screenX;
+    } else if (type === "touchmove") {
+      if (screenX > startX + threshold || screenX < startX - threshold) {
+        // moved more than 20px left or right
+        document.body.classList.add("prevent-scroll");
+      }
+    } else if (type === "touchend") {
+      document.body.classList.remove("prevent-scroll");
+      startX = 0;
+    }
+  };
+
   return (
-    <Slider
-      className="sliderPortofolio__nav"
-      customSettings={navSliderSettings}
+    <div
+      className="custom-slider"
+      onTouchEnd={swipeAction}
+      onTouchMove={swipeAction}
+      onTouchStart={swipeAction}
     >
-      {navItems}
-    </Slider>
+      <Slider
+        className="sliderPortofolio__nav"
+        customSettings={navSliderSettings}
+      >
+        {navItems}
+      </Slider>
+    </div>
   );
 };
 
