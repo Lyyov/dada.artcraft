@@ -261,4 +261,8 @@ input[type="submit"] {
   text-transform: uppercase;
   height: 54px;
   width: 169px;
+
+  &:hover {
+    color: $color_hover;
+  }
 }

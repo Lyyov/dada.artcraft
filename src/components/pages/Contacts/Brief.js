@@ -210,7 +210,7 @@ const Brief = () => {
               agree with the privacy policy.
             </p>
 
-            <div className="col-md-5">
+            <div className="col-12">
               <div className="text-center">
                 <span className="brief__button button" onClick={handleSubmit}>
                   <span>Submit</span>
