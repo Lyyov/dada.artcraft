@@ -20,7 +20,6 @@ function App() {
         <Switch>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes />
-            <Redirect component={About}></Redirect>
           </Suspense>
         </Switch>
       </Layout>

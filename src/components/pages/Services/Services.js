@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import Slider from "../../../containers/Slider/Slider";
 
-import headerbanner from "../../../assets/services-header.png";
+// import headerbanner from "../../../assets/services-header.png";
 import service1 from "../../../assets/services/service1.png";
 import service2 from "../../../assets/services/service2.png";
 import service3 from "../../../assets/services/service3.png";
@@ -98,13 +98,14 @@ const Services = () => {
       <p className="know__item-text">{item.text}</p>
     </div>
   ));
+  console.log("dd", process.env.PUBLIC_URL);
   return (
     <div className="services" id="services">
       <section className="services__relative">
         <img
           loading="lazy"
           className="services__banner"
-          src={headerbanner}
+          src={`${process.env.PUBLIC_URL}assets/pour-gif-min.gif`}
           alt="banner"
         />
         <div className={`services__text`}>
