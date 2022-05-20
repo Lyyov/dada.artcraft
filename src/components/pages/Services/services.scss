@@ -265,6 +265,10 @@
     .slick-slide {
       opacity: 1;
     }
+
+    .slick__custom-nav g g {
+      stroke: $color_black;
+    }
   }
 
   @include respond_to(sm) {

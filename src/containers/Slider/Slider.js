@@ -8,7 +8,7 @@ import "./_slick_theme.scss";
 
 import "./slider.scss";
 
-function arrow(classNameNav, onClick) {
+function arrow(classNameNav, onClick, background) {
   return (
     <div onClick={onClick} className={`slider__custom-nav ${classNameNav}`}>
       <svg
@@ -31,7 +31,7 @@ function arrow(classNameNav, onClick) {
           <g
             id="Desktop-HD"
             transform="translate(-1368.000000, -2801.000000)"
-            stroke="#ffffff"
+            stroke={background ? "background" : "#ffffff"}
             strokeWidth="1.5"
           >
             <path
@@ -46,13 +46,13 @@ function arrow(classNameNav, onClick) {
 }
 
 function SampleNextArrow(props) {
-  const { onClick } = props;
-  return arrow("slider__custom-nav-next", onClick);
+  const { onClick, background } = props;
+  return arrow("slider__custom-nav-next", onClick, background);
 }
 
 function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return arrow("slider__custom-nav-prev", onClick);
+  const { onClick, background } = props;
+  return arrow("slider__custom-nav-prev", onClick, background);
 }
 
 class SliderContainer extends react.Component {
@@ -63,10 +63,11 @@ class SliderContainer extends react.Component {
       speed: 1500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
+      nextArrow: <SampleNextArrow background={this.props.arrowBackground} />,
+      prevArrow: <SamplePrevArrow background={this.props.arrowBackground} />,
     },
   };
+
   render() {
     const { customSettings, className, children } = this.props;
 

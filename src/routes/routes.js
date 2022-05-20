@@ -117,10 +117,6 @@ const routes = [
     component: BeautyOffice,
     exact: true,
   },
-  {
-    path: "*",
-    component: Home,
-  },
 ];
 
 function RouteWithSubRoutes(route) {

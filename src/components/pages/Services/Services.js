@@ -214,6 +214,7 @@ const Services = () => {
             <div className="col-md-6 col-sm-12">
               <Slider
                 className="know__slider"
+                arrowBackground="#000000"
                 customSettings={{
                   fade: true,
                   speed: 1000,
