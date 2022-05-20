@@ -1,6 +1,5 @@
 import React from "react";
 
-import NavSlider from "../../NavSlider/NavSlider";
 import ImgContainer from "../../ImgContainer/ImgContainer"; // use className prop, alt, src
 import Section from "./section"; // use className prop
 
@@ -143,9 +142,6 @@ const Saula = (props) => {
         {/* <Section>
           <ImgContainer zoomHandler={zoomHandler} src={images[23]} id={images[23]} alt={images[23].alt} />
         </Section> */}
-        <Section>
-          <NavSlider />
-        </Section>
       </div>
     </div>
   );
