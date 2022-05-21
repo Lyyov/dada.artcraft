@@ -33,7 +33,7 @@
     letter-spacing: 0.45px;
     text-align: left;
     line-height: 24.88px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   input[type="submit"] {
     margin-right: 0;
@@ -112,7 +112,7 @@
   background-color: $black_bcg;
   &__content {
     padding: 100px 0;
-    border: 6px solid $color_cielo-blue;
+    // border: 6px solid $color_cielo-blue;
   }
   &__form {
     max-width: 660px;

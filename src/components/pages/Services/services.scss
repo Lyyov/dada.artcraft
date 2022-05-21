@@ -123,8 +123,15 @@
       margin-top: 30px;
     }
 
+    &__relative {
+      padding-top: 0;
+    }
+
     &__banner {
-      display: none;
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
     }
 
     &__title {
@@ -211,6 +218,7 @@
 
     &__item {
       margin-bottom: 20px;
+      padding: 0;
       &-title {
         font-size: 18px;
         margin-top: 0;
@@ -227,6 +235,7 @@
   &__title {
     width: 100%;
     padding: 0 80px;
+    margin-bottom: 80px;
   }
   &__row {
     margin: 0 -100px !important;
@@ -275,6 +284,7 @@
     &__title {
       padding: 0;
       margin: 0;
+      margin-bottom: 20px;
     }
     &__row {
       margin: 0 -15px !important;

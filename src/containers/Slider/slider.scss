@@ -1,7 +1,7 @@
-$height: 28vh;
+$height: 33vh;
 .slider-container {
   position: relative;
-  height: calc(100vh - 50px - #{$height});
+  height: calc(100vh - 50px - #{$height/2});
 
   .slider {
     position: absolute;
@@ -31,7 +31,7 @@ $height: 28vh;
   }
 
   &__image-container {
-    height: calc(100vh - 50px - #{$height});
+    height: calc(100vh - 50px - #{$height/2});
     width: 100%;
 
     img {
@@ -42,8 +42,11 @@ $height: 28vh;
     }
   }
   &__nav {
-    height: $height;
-    background-color: $black_bcg;
+    // height: $height;
+    // background-color: $black_bcg;
+    margin-left: 18vw;
+    margin-top: 30px;
+    margin-bottom: 25px;
 
     &-item {
       border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
@@ -75,10 +78,17 @@ $height: 28vh;
     }
 
     img {
-      width: 100%;
       object-fit: cover;
       height: $height;
       transition: transform 1s ease;
+    }
+
+    .slick-slide {
+      margin-right: 3%;
+    }
+
+    .slick-track {
+      display: flex;
     }
   }
 
