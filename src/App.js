@@ -1,5 +1,5 @@
 import "./style/style.scss";
-import { Switch, Redirect } from "react-router-dom";
+
 import React, { Suspense } from "react";
 // import { SmoothProvider } from 'react-smooth-scrolling';
 
@@ -17,11 +17,9 @@ function App() {
       <Header />
 
       <Layout>
-        <Switch>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes />
-          </Suspense>
-        </Switch>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes />
+        </Suspense>
       </Layout>
 
       <Footer />
