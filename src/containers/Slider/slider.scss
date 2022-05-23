@@ -1,4 +1,4 @@
-$height: 33vh;
+$height: 50vh;
 .slider-container {
   position: relative;
   height: calc(100vh - 50px - #{$height/2});
@@ -41,57 +41,6 @@ $height: 33vh;
       width: 100%;
     }
   }
-  &__nav {
-    // height: $height;
-    // background-color: $black_bcg;
-    margin-left: 18vw;
-    margin-top: 30px;
-    margin-bottom: 25px;
-
-    &-item {
-      border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
-      border-top: 0;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-
-      &:hover img {
-        transform: scale(1.1);
-      }
-    }
-
-    &-text {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .slick-list,
-    .slick-track,
-    .slick-slide {
-      height: 100%;
-    }
-
-    img {
-      object-fit: cover;
-      height: $height;
-      transition: transform 1s ease;
-    }
-
-    .slick-slide {
-      margin-right: 3%;
-      border-radius: 3px;
-    }
-
-    .slick-track {
-      display: flex;
-    }
-  }
 
   .slick-current &__item {
     .borders-left,
@@ -110,38 +59,6 @@ $height: 33vh;
   .slick-list,
   .slick-track {
     height: 100%;
-  }
-
-  @include respond_to(sm) {
-    &__nav {
-      position: relative;
-      margin: 15px 0;
-      margin-left: 15px;
-      height: auto;
-      background-color: transparent;
-      &-item {
-        background-color: $color_main;
-        height: 100%;
-        border: 0;
-        img {
-          width: 150px;
-          height: 110px;
-        }
-
-        &:hover img {
-          transform: scale(1);
-        }
-      }
-
-      .slick-slide {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-
-      .slick-track {
-        display: flex;
-      }
-    }
   }
 }
 
@@ -170,6 +87,97 @@ $height: 33vh;
     }
     &__text {
       padding: 20px 60px;
+    }
+  }
+}
+
+// nav slider
+
+$item_width: 36vw;
+$item_margins: 3vw;
+
+.sliderPortofolio__nav {
+  // height: $height;
+  // background-color: $black_bcg;
+  margin-left: $item_margins;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  &-item {
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    border-top: 0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: $item_width;
+    border-radius: 9px;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &-text {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+    height: $height;
+    width: $item_width;
+    transition: transform 1s ease;
+    border-radius: 9px;
+  }
+
+  .slick-slide {
+    margin: 0 $item_margins / 2;
+    border-radius: 9px;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  @include respond_to(sm) {
+    position: relative;
+    margin: 15px 0;
+    margin-left: 15px;
+    height: auto;
+    background-color: transparent;
+    &-item {
+      background-color: $color_main;
+      height: 100%;
+      border: 0;
+      img {
+        width: 150px;
+        height: 110px;
+      }
+
+      &:hover img {
+        transform: scale(1);
+      }
+    }
+
+    .slick-slide {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .slick-track {
+      display: flex;
     }
   }
 }

@@ -12,6 +12,7 @@ const NavSlider = () => {
     dots: false,
     arrows: 0,
     draggable: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 767,
