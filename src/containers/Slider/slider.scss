@@ -1,4 +1,4 @@
-$height: 50vh;
+$height: 48vh;
 .slider-container {
   position: relative;
   height: calc(100vh - 50px - #{$height/2});
@@ -110,7 +110,7 @@ $item_margins: 3vw;
     position: relative;
     overflow: hidden;
     width: $item_width;
-    border-radius: 9px;
+    border-radius: 7px;
 
     &:hover img {
       transform: scale(1.1);
@@ -139,7 +139,7 @@ $item_margins: 3vw;
     height: $height;
     width: $item_width;
     transition: transform 1s ease;
-    border-radius: 9px;
+    border-radius: 7px;
   }
 
   .slick-slide {
