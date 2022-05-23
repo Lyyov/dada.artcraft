@@ -1,5 +1,5 @@
-import React, { Fragment, lazy, Suspense } from "react";
-import { Route } from "react-router-dom";
+import React, { Fragment, lazy } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 const Home = lazy(() =>
   import(/* webpackChunkName: "Home" */ "../components/pages/Home/Home")
 );
@@ -45,37 +45,30 @@ const routes = [
   {
     path: "/",
     component: Home,
-    exact: true,
   },
   {
     path: "/projects",
     component: Projects,
-    exact: true,
   },
   {
     path: "/about",
     component: About,
-    exact: true,
   },
   {
     path: "/contacts",
     component: Contact,
-    exact: true,
   },
   {
     path: "/brief",
     component: Brief,
-    exact: true,
   },
   {
     path: "/services",
     component: Services,
-    exact: true,
   },
   {
     path: "/saula",
     component: Saula,
-    exact: true,
     // routes: [
     //   {
     //     path: "/tacos/bus",
@@ -90,54 +83,40 @@ const routes = [
   {
     path: "/sagro",
     component: Sagro,
-    exact: true,
   },
   {
     path: "/prgisc",
     component: Prgisc,
-    exact: true,
   },
   {
     path: "/mancomm",
     component: Mancomm,
-    exact: true,
   },
   {
     path: "/banners",
     component: Banners,
-    exact: true,
   },
   {
     path: "/branding",
     component: Branding,
-    exact: true,
   },
   {
     path: "/beauty-office",
     component: BeautyOffice,
-    exact: true,
   },
 ];
 
-function RouteWithSubRoutes(route) {
-  return (
-    <Route
-      exact={route.exact}
-      path={route.path}
-      render={(props) => (
-        // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.routes} />
-      )}
-    />
-  );
-}
-function Routes() {
+function CustomRoutes() {
   return (
     <Fragment>
-      {routes.map((route, i) => {
-        return <RouteWithSubRoutes key={i} {...route} />;
-      })}
+      <Routes>
+        {routes.map((route, i) => {
+          return (
+            <Route path={route.path} element={<route.component />} key={i} />
+          );
+        })}
+      </Routes>
     </Fragment>
   );
 }
-export default Routes;
+export default CustomRoutes;

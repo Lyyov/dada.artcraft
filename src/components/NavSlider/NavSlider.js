@@ -6,18 +6,14 @@ const NavSlider = () => {
   const navSliderSettings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     dots: false,
     arrows: 0,
+    draggable: true,
+    variableWidth: true,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
       {
         breakpoint: 767,
         settings: {

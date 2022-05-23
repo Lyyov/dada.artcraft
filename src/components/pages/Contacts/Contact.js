@@ -182,8 +182,7 @@ const Contact = () => {
             <p className="contact__address">
               <span>REPUBLICA MOLDOVA</span>
               <br />
-              Chișinău, <br />
-              Roguleni 6.
+              Chișinău, Roguleni 6.
             </p>
             <div className="contact__phone">
               <span>Tel</span>

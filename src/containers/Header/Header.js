@@ -1,5 +1,5 @@
-import { Link, useHistory } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 import logo from "../../assets/logo/logo-text-svg.svg";
 
@@ -7,13 +7,6 @@ import "./header.scss";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
-
-  const history = useHistory();
-
-  useEffect(() => {
-    // on location change, close nav
-    return history.listen(() => closeBurger());
-  }, [history]);
 
   // on nav open set a background with opacity on the window
   const backdrop = () => (
@@ -36,6 +29,9 @@ const Header = () => {
     setBurger(false);
   };
 
+  // on location change, close nav
+  const handleItemClick = () => closeBurger();
+
   return (
     <header className="header">
       <div className="container">
@@ -46,26 +42,46 @@ const Header = () => {
             }`}
           >
             <ul className="header__bloc">
-              <Link className="header__link" to="/">
+              <Link onClick={handleItemClick} className="header__link" to="/">
                 Home
               </Link>
-              <Link className="header__link" to="/projects">
+              <Link
+                onClick={handleItemClick}
+                className="header__link"
+                to="/projects"
+              >
                 Works
               </Link>
-              <Link className="header__link" to="/services">
+              <Link
+                onClick={handleItemClick}
+                className="header__link"
+                to="/services"
+              >
                 Services
               </Link>
             </ul>
             <ul className="header__bloc">
-              <Link className="header__link" to="/about">
+              <Link
+                onClick={handleItemClick}
+                className="header__link"
+                to="/about"
+              >
                 About Us
               </Link>
-              <Link className="header__link" to="/contacts">
+              <Link
+                onClick={handleItemClick}
+                className="header__link"
+                to="/contacts"
+              >
                 Contacts
               </Link>
               {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
-            <Link className="header__logo logo" to="/">
+            <Link
+              onClick={handleItemClick}
+              className="header__logo logo"
+              to="/"
+            >
               <img loading="lazy" src={logo} alt="logo" />
               {/* dada
                 <br/>
@@ -78,7 +94,11 @@ const Header = () => {
           >
             <div className="burger-icon"></div>
           </button>
-          <Link className="header__logo header__logo-mobile logo" to="/">
+          <Link
+            onClick={handleItemClick}
+            className="header__logo header__logo-mobile logo"
+            to="/"
+          >
             <img loading="lazy" src={logo} alt="logo" />
           </Link>
         </div>
