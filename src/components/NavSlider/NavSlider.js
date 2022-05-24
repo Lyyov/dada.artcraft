@@ -38,12 +38,12 @@ const NavSlider = () => {
     },
     {
       text: "",
-      src: process.env.PUBLIC_URL + "/assets/mancomm/cover.jpg",
+      src: process.env.PUBLIC_URL + "/assets/mancomm/img3.jpg",
       to: "/mancomm",
     },
     {
       text: "",
-      src: process.env.PUBLIC_URL + "/assets/saula/cover.jpg",
+      src: process.env.PUBLIC_URL + "/assets/saula/img6.jpg",
       to: "/saula",
     },
   ];
