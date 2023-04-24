@@ -75,10 +75,15 @@ $height: 48vh;
     position: relative;
     transition: opacity 0.8s ease 1.6s;
   }
+  &__subtitle {
+    font-size: 120%;
+  }
   &__title {
-    font-size: 85px;
+    font-size: 103px;
     text-transform: uppercase;
     line-height: 1;
+    position: relative;
+    top: -7px;
   }
 
   @include respond_to(sm) {
