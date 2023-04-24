@@ -5,7 +5,7 @@ import Slider from "../../../containers/Slider/Slider";
 import NavSlider from "../../NavSlider/NavSlider";
 
 const Home = () => {
-  const mainSliderImg = process.env.PUBLIC_URL + "/assets/home/homepage.jpg";
+  const mainSliderImg = process.env.PUBLIC_URL + "/assets/dada-banner11.gif";
   const mainSliderSettings = {
     fade: true,
     speed: 2500,
