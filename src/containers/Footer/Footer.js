@@ -49,11 +49,6 @@ const footer = () => {
                 </a>
               </li>
               <li>
-                <a className="footer__link" href="tel:+37367200166">
-                  +373 67 720 700
-                </a>
-              </li>
-              <li>
                 <a
                   className="footer__link"
                   href="mailto:dada.artcraft@gmail.com"

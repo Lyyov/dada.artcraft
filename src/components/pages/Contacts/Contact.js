@@ -188,7 +188,6 @@ const Contact = () => {
               <span>Tel</span>
               <span>
                 <a href="tel:+37367200165">(373) 67-200-165</a> <br />
-                <a href="tel:+37367720200">(373) 67-720-200</a>
               </span>
             </div>
             <div className="contact__email">
