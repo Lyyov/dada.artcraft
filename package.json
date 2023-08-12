@@ -9,7 +9,6 @@
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
     "framer-motion": "^3.1.1",
-    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -46,6 +45,7 @@
   },
   "devDependencies": {
     "react-error-overlay": "^6.0.9",
+    "sass": "^1.65.1",
     "sass-loader": "^7.1.0"
   }
 }

@@ -4,6 +4,37 @@ import Aux from "../../../hoc/Auxjs";
 import Slider from "../../../containers/Slider/Slider";
 import NavSlider from "../../NavSlider/NavSlider";
 
+const heroItems = [
+  {
+    text1: "Design",
+    text2: "Logo",
+  },
+  {
+    text1: "Full Guide",
+    text2: "Identities",
+  },
+  {
+    text1: "Design",
+    text2: "Digital Marketing",
+  },
+  {
+    text1: "Visuals",
+    text2: "Social Media",
+  },
+  {
+    text1: "Print",
+    text2: "Design",
+  },
+  {
+    text1: "Visualization",
+    text2: "Infographics and Data",
+  },
+  {
+    text1: "Consultation",
+    text2: "Art Direction",
+  },
+];
+
 const Home = () => {
   const mainSliderImg = process.env.PUBLIC_URL + "/assets/dada-banner11.gif";
   const mainSliderSettings = {
@@ -26,71 +57,19 @@ const Home = () => {
           className="sliderPortofolio"
           customSettings={mainSliderSettings}
         >
-          <div className="sliderPortofolio__item">
-            <div className={`sliderPortofolio__content`}>
-              <div className={`sliderPortofolio__text`}>
-                <small className={`sliderPortofolio__subTitle`}>
-                  We Create
-                </small>{" "}
-                <br />
-                <span className={`sliderPortofolio__title`}>Brands</span>
+          {heroItems.map(({ text1, text2 }) => (
+            <div key={text1} className="sliderPortofolio__item">
+              <div className={`sliderPortofolio__content`}>
+                <div className={`sliderPortofolio__text`}>
+                  <small className={`sliderPortofolio__subTitle`}>
+                    {text1}
+                  </small>{" "}
+                  <br />
+                  <span className={`sliderPortofolio__title`}>{text2}</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="sliderPortofolio__item">
-            {/* <div className="sliderPortofolio__image-container image-container">
-              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding2.jpg'}  alt="" /> 
-            </div> */}
-            <div className={`sliderPortofolio__content`}>
-              <div className={`sliderPortofolio__text`}>
-                <small className={`sliderPortofolio__subTitle`}>
-                  Full Guides
-                </small>{" "}
-                <br />
-                <span className={`sliderPortofolio__title`}>Identities</span>
-              </div>
-            </div>
-          </div>
-          <div className="sliderPortofolio__item">
-            {/* <div className="sliderPortofolio__image-container image-container">
-              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding3.jpg'}  alt="" /> 
-            </div> */}
-            <div className={`sliderPortofolio__content`}>
-              <div className={`sliderPortofolio__text`}>
-                <small className={`sliderPortofolio__subTitle`}>
-                  Full Guides
-                </small>{" "}
-                <br />
-                <span className={`sliderPortofolio__title`}>Identities</span>
-              </div>
-            </div>
-          </div>
-          <div className="sliderPortofolio__item">
-            {/* <div className="sliderPortofolio__image-container image-container">
-              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web1.jpg'}  alt="" /> 
-            </div> */}
-            <div className={`sliderPortofolio__content`}>
-              <div className={`sliderPortofolio__text`}>
-                <small className={`sliderPortofolio__subTitle`}>
-                  Developing
-                </small>{" "}
-                <br />
-                <span className={`sliderPortofolio__title`}>Websites</span>
-              </div>
-            </div>
-          </div>
-          <div className="sliderPortofolio__item">
-            {/* <div className="sliderPortofolio__image-container image-container">
-              <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/web2.jpg'}  alt="" /> 
-            </div> */}
-            <div className={`sliderPortofolio__content`}>
-              <div className={`sliderPortofolio__text`}>
-                <small className={`sliderPortofolio__subTitle`}>Online</small>{" "}
-                <br />
-                <span className={`sliderPortofolio__title`}>Stores</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
       </div>
       <NavSlider />
