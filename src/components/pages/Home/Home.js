@@ -6,32 +6,23 @@ import NavSlider from "../../NavSlider/NavSlider";
 
 const heroItems = [
   {
-    text1: "Design",
     text2: "Logo",
   },
   {
-    text1: "Full Guide",
+    text1: "Brand",
     text2: "Identities",
   },
+
   {
-    text1: "Design",
-    text2: "Digital Marketing",
+    text1: "Social Media",
+    text2: "Visuals",
   },
   {
-    text1: "Visuals",
-    text2: "Social Media",
+    text2: "Printables",
   },
   {
-    text1: "Print",
-    text2: "Design",
-  },
-  {
-    text1: "Visualization",
-    text2: "Infographics and Data",
-  },
-  {
-    text1: "Consultation",
-    text2: "Art Direction",
+    text1: "Art",
+    text2: "Direction",
   },
 ];
 
@@ -61,10 +52,11 @@ const Home = () => {
             <div key={text1} className="sliderPortofolio__item">
               <div className={`sliderPortofolio__content`}>
                 <div className={`sliderPortofolio__text`}>
-                  <small className={`sliderPortofolio__subTitle`}>
-                    {text1}
-                  </small>{" "}
-                  <br />
+                  {text1 && ( // if text1 is not empty
+                    <span className={`sliderPortofolio__subTitle`}>
+                      {text1}
+                    </span>
+                  )}
                   <span className={`sliderPortofolio__title`}>{text2}</span>
                 </div>
               </div>

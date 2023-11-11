@@ -86,9 +86,25 @@ $height: 48vh;
   @include respond_to(sm) {
     &__title {
       font-size: 40px;
+      line-height: 25px;
+      text-align: center;
+      display: inline-block;
+    }
+    &__subTitle {
+      text-align: center;
+      display: inline-block;
+      font-size: 30px;
+      margin-bottom: 3px;
+      position: relative;
+      top: -3px;
     }
     &__text {
       padding: 20px 60px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
 }
