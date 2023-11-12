@@ -76,6 +76,10 @@ $height: 48vh;
     opacity: 0;
     position: relative;
     transition: opacity 0.8s ease 1.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   &__title {
     font-size: 85px;
@@ -101,10 +105,6 @@ $height: 48vh;
     &__text {
       padding: 20px 60px;
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
   }
 }
