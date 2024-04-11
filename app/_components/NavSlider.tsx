@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import SliderContainer from "./SliderContainer";
+import { Settings } from "react-slick";
 
 const NavSlider = () => {
-  const navSliderSettings = {
+  const navSliderSettings: Settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     dots: false,
-    arrows: 0,
     draggable: true,
     variableWidth: true,
     responsive: [
@@ -20,7 +20,6 @@ const NavSlider = () => {
         settings: {
           slidesToShow: 3,
           variableWidth: true,
-          variableHeight: true,
           swipeToSlide: true,
         },
       },
@@ -61,7 +60,7 @@ const NavSlider = () => {
 
   let startX = 0;
 
-  const swipeAction = (event) => {
+  const swipeAction = (event: React.TouchEvent) => {
     event.preventDefault();
     event.stopPropagation();
     const { type } = event;

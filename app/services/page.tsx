@@ -1,96 +1,22 @@
 import Link from "next/link";
 import SliderContainer from "../_components/SliderContainer";
+import { goodToKnowApi, howItWorkApi, servicesApi } from "./_api";
+import Service from "./_components/Service";
+import HowItWork from "./_components/HowItWork";
+import GoodToKnow from "./_components/GoodToKnow";
+import Image from "next/image";
 
 const Services = () => {
-
-  const servicesApi = [
-    {
-      title: "Visual Identity",
-      text: "We skilfully create layouts for all types of visual media, to support your brand's communication, from business cards to catalogs, roll-ups or whatever else you may think of.",
-      img: '/assets/services/service1.png',
-    },
-    {
-      title: "Brand Guidelines",
-      text: "If you are a business owner or you run any kind of organisation, you will definitely need a powerful visual presence, your company’s unique identity.",
-      img: '/assets/services/service2.png',
-    },
-    {
-      title: "Web Development",
-      text: " “Responsive” is our second name. Whether you need a simple static website or a complex e-commerce solution we put in the same level of commitment to fine details. ",
-      img: '/assets/services/service3.png',
-    },
-    {
-      title: "Web Design",
-      text: "Delighting users with a simple and memorable experience is just as important as having good code. We strive to make sure every moment your customer spends with your product is pleasing and engaging.",
-      img: '/assets/services/service4.png',
-    },
-  ];
-  const howItWorkApi = [
-    {
-      title: "application",
-      text: "Please send your brief, and we will check in a call if we're a good match for your project.",
-    },
-    {
-      title: "guidance",
-      text: "We're here to listen and to help our customers succeed by providing efficient and creative solutions.",
-    },
-    {
-      title: "solution",
-      text: "Based on your target goals, we will develop strategies to achieve what is suitable for your business.",
-    },
-    {
-      title: "execution",
-      text: "We will produce competitive content and will deliver approved promotional materials on time.",
-    },
-  ];
-  const services = servicesApi.map((item) => (
-    <div className="col-md-3" key={item.title}>
-      <div className="services__list-item">
-        <img loading="lazy" src={item.img} alt="service" />
-        <div className="services__list-content">
-          <div className="services__list-title">{item.title}</div>
-          <p className="services__list-text">{item.text}</p>
-        </div>
-      </div>
-    </div>
-  ));
-  const howItwork = howItWorkApi.map((item) => (
-    <div className="col-lg-3 col-md-8 col-sm-12" key={item.title}>
-      <div className="howWork__item">
-        <h3 className="howWork__item-title">{item.title}</h3>
-        <p className="howWork__item-text">{item.text}</p>
-      </div>
-    </div>
-  ));
-  const goodToKnowApi = [
-    {
-      title: "WHAT’S THE INVESTMENT?",
-      text: "Our packages are fully customized because each person/company has its own requirements. After the consultation stage, once we understand your needs, we'll match the best solutions for your business to make sure that you get the most out of your investment.",
-    },
-    {
-      title: "WHEN CAN WE START?",
-      text: "Usually, each project is crafted for about 3-6 weeks. Our practice shows that it is best to schedule the project in advance, but it all depends on the time of the year. If you need to launch in no time, feel free to call us to find a solution.",
-    },
-    {
-      title: "WHAT IF WE NEED JUST A LOGO?",
-      text: "We are open to the exclusive logo service, although the logo is just one element of the brand, and we think it is better if all the elements are built around a unique strategy so that you have a consistent presence everywhere.",
-    },
-  ];
-  const knowItems = goodToKnowApi.map((item) => (
-    <div className="know__item" key={item.title}>
-      <h5 className="know__item-title">{item.title}</h5>
-      <p className="know__item-text">{item.text}</p>
-    </div>
-  ));
-
   return (
     <div className="services" id="services">
       <section className="services__relative">
-        <img
+        <Image
           loading="lazy"
           className="services__banner"
           src={`/assets/pour-gif-min.gif`}
           alt="banner"
+          width={1000}
+          height={700}
         />
         <div className={`services__text`}>
           {/* <h3 className="services__title title">Services</h3> */}
@@ -119,7 +45,11 @@ const Services = () => {
                 <h3 className="services__title title">What We Do</h3>
               </div>
             </div>
-            <div className="services__list row">{services}</div>
+            <div className="services__list row">
+              {servicesApi.map((item) => (
+                <Service key={item.title} {...item} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -130,7 +60,11 @@ const Services = () => {
               <h3 className="howWork__title title">How it Works</h3>
             </div>
           </div>
-          <div className="row howWork__row">{howItwork}</div>
+          <div className="row howWork__row">
+            {howItWorkApi.map((item) => (
+              <HowItWork key={item.title} {...item} />
+            ))}
+          </div>
           <div className="text-center">
             <Link href="/contacts" className="howWork__button button">
               <span>Apply</span>
@@ -189,10 +123,12 @@ const Services = () => {
           </div>
           <div className="row know__row">
             <div className="col-md-6 col-sm-12">
-              <img
+              <Image
                 loading="lazy"
                 className="know__image"
-                src={'/assets/services/good-to-know.png'}
+                src={"/assets/services/good-to-know.png"}
+                width={600}
+                height={600}
                 alt=""
               />
             </div>
@@ -208,7 +144,9 @@ const Services = () => {
                   pauseOnHover: false,
                 }}
               >
-                {knowItems}
+                {goodToKnowApi.map(({ title, text }) => (
+                  <GoodToKnow key={title} title={title} text={text} />
+                ))}
               </SliderContainer>
             </div>
           </div>

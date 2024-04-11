@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Slider from "react-slick";
-import { useEffect, useState } from "react";
+import Slider, { Settings } from "react-slick";
+import { useState } from "react";
 
-function arrow(classNameNav:string,  background: string,onClick?:() => void,) {
+function arrow(classNameNav: string, background: string, onClick?: () => void) {
   return (
     <div onClick={onClick} className={`slider__custom-nav ${classNameNav}`}>
       <svg
@@ -41,49 +41,47 @@ function arrow(classNameNav:string,  background: string,onClick?:() => void,) {
 }
 
 type TSliderControls = {
-    onClick?: () => void;
-    background: string;
-}
+  onClick?: () => void;
+  background: string;
+};
 
 function SampleNextArrow(props: TSliderControls) {
   const { onClick, background } = props;
-  return arrow("slider__custom-nav-next", background,  onClick,);
+  return arrow("slider__custom-nav-next", background, onClick);
 }
 
 function SamplePrevArrow(props: TSliderControls) {
   const { onClick, background } = props;
-  return arrow("slider__custom-nav-prev", background,  onClick,);
+  return arrow("slider__custom-nav-prev", background, onClick);
 }
 
 interface TSliderContainer {
-    customSettings: any;
-    className: string;
-    children: any;
-    arrowBackground: string;
-    }
+  customSettings: Settings;
+  className?: string;
+  children: React.ReactNode;
+  arrowBackground?: string;
+}
 
-export default function SliderContainer({ customSettings, className, children,arrowBackground }: TSliderContainer) {
-    const [settings, setSettings] = useState({
-        dots: true,
-        infinite: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <SampleNextArrow background={arrowBackground} />,
-        prevArrow: <SamplePrevArrow background={arrowBackground} />,}
-    );
+export default function SliderContainer({
+  customSettings,
+  className,
+  children,
+  arrowBackground,
+}: TSliderContainer) {
+  const [settings, setSettings] = useState({
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow background={arrowBackground || ""} />,
+    prevArrow: <SamplePrevArrow background={arrowBackground || ""} />,
+    ...customSettings,
+  });
 
-    useEffect(() => {
-        setSettings({
-            ...settings,
-            ...customSettings,
-        });
-        }, [customSettings]);
-
-
-    return (
-      <Slider {...settings} className={`slider ${className}`}>
-        {children}
-      </Slider>
-    )
+  return (
+    <Slider {...settings} className={`slider ${className}`}>
+      {children}
+    </Slider>
+  );
 }

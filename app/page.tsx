@@ -1,5 +1,3 @@
-
-import Head from "next/head";
 import SliderContainer from "./_components/SliderContainer";
 import Image from "next/image";
 import NavSlider from "./_components/NavSlider";
@@ -27,7 +25,7 @@ const heroItems = [
 ];
 
 const Home = () => {
-  const mainSliderImg =  "/assets/dada-banner11.gif";
+  const mainSliderImg = "/assets/dada-banner11.gif";
   const mainSliderSettings = {
     fade: true,
     speed: 2500,
@@ -39,29 +37,22 @@ const Home = () => {
 
   return (
     <>
-    <Head>
-    <link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-/>
-    </Head>
       <div className="slider-container">
         <div className="sliderPortofolio__image-container image-container">
-          {/* <img loading="lazy" className="imgage-container_image" src={process.env.PUBLIC_URL + '/assets/home/portofolio/branding1.jpg'}  alt="" />  */}
-          <Image width={1000} height={1000} loading="lazy" src={mainSliderImg} alt="" />
+          <Image
+            width={1000}
+            height={1000}
+            loading="lazy"
+            src={mainSliderImg}
+            alt=""
+          />
         </div>
         <SliderContainer
           className="sliderPortofolio"
           customSettings={mainSliderSettings}
         >
           {heroItems.map(({ text1, text2 }) => (
-            <div key={text1} className="sliderPortofolio__item">
+            <div key={text1 + text2} className="sliderPortofolio__item">
               <div className={`sliderPortofolio__content`}>
                 <div className={`sliderPortofolio__text`}>
                   {text1 && ( // if text1 is not empty

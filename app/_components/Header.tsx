@@ -1,7 +1,8 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
               <Link
                 onClick={handleItemClick}
                 className="header__link"
-                href="/projects"
+                href="/works"
               >
                 Works
               </Link>
@@ -80,7 +81,13 @@ const Header = () => {
               className="header__logo logo"
               href="/"
             >
-              <img loading="lazy" src={'/assets/logo/logo-text-svg.svg'} alt="logo" />
+              <Image
+                width={77}
+                height={24}
+                loading="lazy"
+                src={"/assets/logo/logo-text-svg.svg"}
+                alt="logo"
+              />
               {/* dada
                 <br/>
                 art.craft */}
@@ -97,7 +104,13 @@ const Header = () => {
             className="header__logo header__logo-mobile logo"
             href="/"
           >
-            <img loading="lazy" src={'/assets/logo/logo-text-svg.svg'} alt="logo" />
+            <Image
+              width={77}
+              height={24}
+              loading="lazy"
+              src={"/assets/logo/logo-text-svg.svg"}
+              alt="logo"
+            />
           </Link>
         </div>
       </div>
