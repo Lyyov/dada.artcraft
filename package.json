@@ -1,51 +1,27 @@
 {
-  "name": "dadacraft",
+  "name": "dada.artcraft",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
-  "dependencies": {
-    "@craco/craco": "^6.4.3",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0",
-    "framer-motion": "^3.1.1",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-progressive-graceful-image": "^0.6.14",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "4.0.0",
-    "react-slick": "^0.27.12",
-    "react-smooth-scrolling": "^1.0.2",
-    "web-vitals": "^0.2.4"
-  },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "^14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-slick": "^0.30.1"
   },
   "devDependencies": {
-    "react-error-overlay": "^6.0.9",
-    "sass-loader": "^7.1.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "sass": "^1.70.0",
+    "typescript": "^5"
   }
 }
