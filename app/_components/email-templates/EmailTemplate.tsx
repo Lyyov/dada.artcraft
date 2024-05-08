@@ -38,7 +38,7 @@ const ContactEmailTemplate = (data: TEmailTemplate) => (
                   const keyString = key as keyof TEmailTemplate;
                   if (data[keyString]) {
                     return (
-                      <Row>
+                      <Row key={keyString}>
                         <Column style={informationTableColumn}>
                           <Text style={informationTableLabel}>{keyString}</Text>
                           <Text style={informationTableValue}>
