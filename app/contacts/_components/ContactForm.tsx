@@ -1,161 +1,63 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormSubmittedNotification, {
   TStatus,
 } from "./FormSubmittedNotification";
+import { sendEmail } from "@/app/_lib/services/email";
+import ContactFormFields from "./ContactFormFields";
+import { TEmailTemplate } from "@/app/_components/email-templates/EmailTemplate";
+import { messageOnSendEmail } from "../_utlis";
 
-const message = {
-  ok: "Thank you for get in touch! Soon we will contact you.",
-  error: "Somthing went wrong! Try again later.",
-};
-
-type TFormData = {
-  first_name: string;
-  last_name: string;
-  email: string;
-  message: string;
+const INITIAL_STATE = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  message: "",
 };
 
 const ContactForm = () => {
-  const [data, setData] = useState<TFormData>({
-    first_name: "",
-    last_name: "",
-    email: "",
-    message: "",
-  });
+  const [data, setData] = useState<TEmailTemplate>(INITIAL_STATE);
 
   const [formStatus, setFormStatus] = useState<TStatus>("false"); // false, ok, error
+  const [loading, setLoading] = useState<boolean>(false);
 
-  // change data handlers
-  const handleChangeFirstname = (e: React.ChangeEvent<HTMLInputElement>) =>
-      setData({ ...data, first_name: e.target.value }),
-    handleChangeLastname = (e: React.ChangeEvent<HTMLInputElement>) =>
-      setData({ ...data, last_name: e.target.value }),
-    handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) =>
-      setData({ ...data, email: e.target.value }),
-    handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
-      setData({ ...data, message: e.target.value });
+  useEffect(() => {
+    if (formStatus === "false") return;
 
-  const encode = (data: { [key: string]: string }) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+    const timer = setTimeout(() => {
+      setFormStatus("false");
+    }, 5000);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
-    })
-      .then(() => setFormStatus("ok"))
-      .catch((error) => {
-        console.log("contact submit error", error);
-        setFormStatus("error");
-      });
+    return () => clearTimeout(timer);
+  }, [formStatus]);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    const res = await sendEmail(data);
+
+    if (res) {
+      setFormStatus("ok");
+
+      // reset form
+      setData(INITIAL_STATE);
+    } else {
+      setFormStatus("error");
+    }
+    setLoading(false);
   };
 
   const handleFormStatus = (status: TStatus) => {
-    return <FormSubmittedNotification status={status} message={message.ok} />;
+    return <FormSubmittedNotification status={status} />;
   };
+
   return (
     <form onSubmit={handleSubmit}>
-      {/* need this for netlify bots form deploy */}
-      <input type="hidden" name="form-name" value="contact" />
       <div className="row">
-        <div className="col-md-6">
-          <div
-            className={
-              data.first_name !== ""
-                ? `input-container focused`
-                : `input-container`
-            }
-          >
-            <input
-              onChange={handleChangeFirstname}
-              className="input-container__input"
-              type="text"
-              name="first_name"
-              id="first_name"
-            />
-            <label className="input-container__label" htmlFor="first_name">
-              first name
-            </label>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div
-            className={
-              data.last_name !== ""
-                ? `input-container focused`
-                : `input-container`
-            }
-          >
-            <input
-              onChange={handleChangeLastname}
-              className="input-container__input"
-              type="text"
-              name="last_name"
-              id="last_name"
-            />
-            <label className="input-container__label" htmlFor="last_name">
-              last name
-            </label>
-          </div>
-        </div>
-        <div className="col-sm-12">
-          <div
-            className={
-              data.email !== "" ? `input-container focused` : `input-container`
-            }
-          >
-            <input
-              onChange={handleChangeEmail}
-              className="input-container__input"
-              type="email"
-              name="email"
-              id="email"
-            />
-            <label className="input-container__label" htmlFor="email">
-              Email
-            </label>
-          </div>
-        </div>
-        <div className="col-sm-12">
-          <div
-            className={
-              data.message !== ""
-                ? `input-container focused`
-                : `input-container`
-            }
-          >
-            <textarea
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                handleChangeMessage(e)
-              }
-              rows={5}
-              className="input-container__input"
-              name="message"
-              id="message"
-            />
-            <label className="input-container__label" htmlFor="message">
-              Message
-            </label>
-          </div>
-        </div>
-        <div className="col-md-7">
-          <p className="contact__text">
-            I hereby certify that all the information above is true and
-            accurate.
-          </p>
-        </div>
+        <ContactFormFields {...data} setData={setData} />
         <div className="col-md-5">
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" disabled={loading} />
         </div>
         <div className="col-sm-12">
           {formStatus == "ok" && handleFormStatus(formStatus)}

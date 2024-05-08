@@ -1,13 +1,14 @@
+import { messageOnSendEmail } from "../_utlis";
+
 type TNotification = {
   status: TStatus;
-  message: string;
 };
 
 export type TStatus = "false" | "error" | "ok";
-const FormSubmittedNotification = ({ status, message }: TNotification) => {
+const FormSubmittedNotification = ({ status }: TNotification) => {
   return (
     <div className={`notification ${status === "ok" ? "succes" : "error"}`}>
-      <p className="notification_text">{message}</p>
+      <p className="notification_text">{messageOnSendEmail[status] || ""}</p>
     </div>
   );
 };

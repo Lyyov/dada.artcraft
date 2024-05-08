@@ -64,8 +64,6 @@ export function OneProjectProvider({ children }: TOneProjectLayout) {
     };
   }, [show, project]);
 
-  console.log("project", initialSlide);
-
   return (
     <OneProjectContext.Provider value={contextProps}>
       {show ? (
