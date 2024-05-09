@@ -21,6 +21,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/favicon.png" type="image/png" />
         <title>DaDaCraft</title>
+
+        {/* 
+        Commented out because it's not used in the project for now, but it's a good example of how to add slick stylesheets
         <link
           rel="stylesheet"
           type="text/css"
@@ -30,7 +33,7 @@ export default function RootLayout({
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
+        /> */}
       </head>
       <body className={inter.className}>
         <Header />

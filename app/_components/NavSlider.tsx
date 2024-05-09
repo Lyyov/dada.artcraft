@@ -3,6 +3,7 @@
 import Link from "next/link";
 import SliderContainer from "./SliderContainer";
 import { Settings } from "react-slick";
+import Image from "next/image";
 
 const NavSlider = () => {
   const navSliderSettings: Settings = {
@@ -29,31 +30,37 @@ const NavSlider = () => {
     {
       text: "",
       src: "/assets/sagro/cover.jpg",
-      to: "/sagro",
+      to: "/works/sagro",
+      alt: "Sagro project",
     },
     {
       text: "",
       src: "/assets/pr_gisc/cover.jpg",
-      to: "/prgisc",
+      to: "/works/prgisc",
+      alt: "PR GISC project",
     },
     {
       text: "",
       src: "/assets/mancomm/img3.jpg",
-      to: "/mancomm",
+      to: "/works/mancomm",
+      alt: "Mancomm project",
     },
     {
       text: "",
       src: "/assets/saula/img6.jpg",
-      to: "/saula",
+      to: "/works/saula",
+      alt: "Saula project",
     },
   ];
-  const navItems = nav.map(({ text, src, to }) => (
+  const navItems = nav.map(({ text, src, to, alt }) => (
     <div className="sliderPortofolio__nav-item" key={text}>
-      <Link href={to} className="sliderPortofolio__nav-text">
+      <Link href={to} className="sliderPortofolio__nav-text" aria-label={alt}>
         {text}
       </Link>
       <div className="sliderPortofolio__nav-img">
-        {src && <img loading="lazy" src={src} />}
+        {src && (
+          <Image width={900} height={900} alt={alt} loading="lazy" src={src} />
+        )}
       </div>
     </div>
   ));

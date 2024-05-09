@@ -68,7 +68,7 @@ export default function SliderContainer({
   children,
   arrowBackground,
 }: TSliderContainer) {
-  const [settings, setSettings] = useState({
+  const [settings] = useState({
     dots: true,
     infinite: true,
     speed: 1500,

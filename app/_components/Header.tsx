@@ -1,11 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+const headerItems = [
+  { text: "Home", to: "/", position: "left" },
+  { text: "Works", to: "/works", position: "left" },
+  { text: "Services", to: "/services", position: "left" },
+  { text: "About Us", to: "/about", position: "right" },
+  { text: "Contacts", to: "/contacts", position: "right" },
+];
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
+  const pathname = usePathname();
+
+  // on location change, close nav
+  useEffect(() => {
+    closeBurger();
+  }, [pathname]);
 
   // on nav open set a background with opacity on the window
   const backdrop = () => (
@@ -28,9 +43,6 @@ const Header = () => {
     setBurger(false);
   };
 
-  // on location change, close nav
-  const handleItemClick = () => closeBurger();
-
   return (
     <header className="header">
       <div className="container">
@@ -41,46 +53,35 @@ const Header = () => {
             }`}
           >
             <ul className="header__bloc">
-              <Link onClick={handleItemClick} className="header__link" href="/">
-                Home
-              </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/works"
-              >
-                Works
-              </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/services"
-              >
-                Services
-              </Link>
+              {headerItems
+                .filter(({ position }) => position === "left")
+                .map(({ text, to }) => (
+                  <Link
+                    role="listitem"
+                    className="header__link"
+                    href={to}
+                    key={text}
+                  >
+                    {text}
+                  </Link>
+                ))}
             </ul>
             <ul className="header__bloc">
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/about"
-              >
-                About Us
-              </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/contacts"
-              >
-                Contacts
-              </Link>
+              {headerItems
+                .filter(({ position }) => position === "right")
+                .map(({ text, to }) => (
+                  <Link
+                    role="listitem"
+                    className="header__link"
+                    href={to}
+                    key={text}
+                  >
+                    {text}
+                  </Link>
+                ))}
               {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
-            <Link
-              onClick={handleItemClick}
-              className="header__logo logo"
-              href="/"
-            >
+            <Link className="header__logo logo" href="/">
               <Image
                 width={77}
                 height={24}
@@ -99,11 +100,7 @@ const Header = () => {
           >
             <div className="burger-icon"></div>
           </button>
-          <Link
-            onClick={handleItemClick}
-            className="header__logo header__logo-mobile logo"
-            href="/"
-          >
+          <Link className="header__logo header__logo-mobile logo" href="/">
             <Image
               width={77}
               height={24}
