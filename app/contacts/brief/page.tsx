@@ -7,11 +7,6 @@ import { TEmailTemplate } from "@/app/_components/email-templates/EmailTemplate"
 import { sendEmail } from "@/app/_lib/services/email";
 import BriefFormFields from "../_components/BriefFormFields";
 
-const message = {
-  ok: "Thank you for get in touch! Soon we will contact you.",
-  error: "Somthing went wrong! Try again later.",
-};
-
 const INITIAL_STATE = {
   firstName: "",
   company: "",

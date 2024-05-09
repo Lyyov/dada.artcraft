@@ -7,7 +7,7 @@ import FormSubmittedNotification, {
 import { sendEmail } from "@/app/_lib/services/email";
 import ContactFormFields from "./ContactFormFields";
 import { TEmailTemplate } from "@/app/_components/email-templates/EmailTemplate";
-import { messageOnSendEmail } from "../_utlis";
+import SubmitButton from "@/app/_components/Buttons/SubmitButton";
 
 const INITIAL_STATE = {
   firstName: "",
@@ -58,6 +58,7 @@ const ContactForm = () => {
         <ContactFormFields {...data} setData={setData} />
         <div className="col-md-5">
           <input type="submit" value="Submit" disabled={loading} />
+          <SubmitButton text="Submit" />
         </div>
         <div className="col-sm-12">
           {formStatus == "ok" && handleFormStatus(formStatus)}

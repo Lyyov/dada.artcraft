@@ -2,10 +2,10 @@ import React from "react";
 
 import { projects } from "./_utils";
 import Link from "next/link";
-import ChevronRight from "../_icons/ChevronRight";
 import Image from "next/image";
+import BaseLinkButton from "../_components/Buttons/BaseButton";
 
-const OneProject = () => {
+const Works = () => {
   const items = projects.map(({ name, info, cover, to, text_allprojects }) => {
     return (
       <section key={name} className={`projall__section`}>
@@ -27,12 +27,12 @@ const OneProject = () => {
               <h4 className="projall__domain">{name}</h4>
               <p className="projall__info">{info}</p>
               <p className="projall__text">{text_allprojects}</p>
-              <Link href={"/works/" + to} className="projall__button button">
-                <span>See full project</span>
-                <span className="button__icon">
-                  <ChevronRight />
-                </span>
-              </Link>
+              <BaseLinkButton
+                href={"/works/" + to}
+                text="See full project"
+                srOnly={`View project ${name}`}
+                className=" mt-8"
+              />
             </div>
           </div>
         </div>
@@ -47,4 +47,4 @@ const OneProject = () => {
   );
 };
 
-export default OneProject;
+export default Works;

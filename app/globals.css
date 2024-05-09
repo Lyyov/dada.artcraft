@@ -1,17 +1,43 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  font-family: "Open Sans",sans-serif;
-  color: #fbfbfb;
-  box-sizing: border-box
+@tailwind base;
+@tailwind components;
+
+
+:root {
+  /* colors */
+  --white: #fbfbfb;
+  --black: #1e1e23;
+  --orange: #ddb407;
+  --cielo: #b5e2d2;
+  --success: #aeffae;
+  --error: #f38a8a;
+
+  /* font-size */
+  --fz-xs: 12px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-title: 50px;
+  --fz-title1: 24px;
+  --fz-title-sm: 30px;
+  --fz-title1-sm: 20px;
+
+  /* screens */
+  --screen-sm: 480px;
+  --screen-md: 768px;
+  --screen-lg: 976px;
+  --screen-xl: 1200px;
+  --screen-2xl: 1440px;
+
+  --header-height: 50px;
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-  display: block
+a:hover {
+  text-decoration: none;
+  color: initial;
+}
+main {
+  min-height: 600px;
+  padding-top: var(--header-height);
 }
 
 body {
@@ -23,29 +49,6 @@ body.prevent-scroll {
   overflow: hidden
 }
 
-ol,ul {
-  list-style: none
-}
-
-blockquote,q {
-  quotes: none
-}
-
-blockquote:after,blockquote:before,q:after,q:before {
-  content: "";
-  content: none
-}
-
-a,a:hover {
-  text-decoration: none;
-  color: #000;
-  color: initial
-}
-
-main {
-  min-height: 600px;
-  padding-top: 50px
-}
 
 @media(max-width: 767px) {
   main {
@@ -3271,3 +3274,11 @@ hr {
 }
 
 /*# sourceMappingURL=main.ae8c2f4d.chunk.css.map */
+
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex justify-center items-center bg-orange min-w-[232px] h-[61px] cursor-pointer pl-[50px] pr-[30px] overflow-hidden rounded-sm font-semibold text-black leading-6 text-lg hover:bg-black hover:text-white hover:no-underline focus:opacity-90;
+  }
+}

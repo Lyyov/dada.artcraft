@@ -1,11 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
+
+  const pathname = usePathname();
+
+  // on location change, close nav
+  useEffect(() => {
+    closeBurger();
+  }, [pathname]);
 
   // on nav open set a background with opacity on the window
   const backdrop = () => (
@@ -28,9 +36,6 @@ const Header = () => {
     setBurger(false);
   };
 
-  // on location change, close nav
-  const handleItemClick = () => closeBurger();
-
   return (
     <header className="header">
       <div className="container">
@@ -41,46 +46,25 @@ const Header = () => {
             }`}
           >
             <ul className="header__bloc">
-              <Link onClick={handleItemClick} className="header__link" href="/">
+              <Link className="header__link" href="/">
                 Home
               </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/works"
-              >
+              <Link className="header__link" href="/works">
                 Works
               </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/services"
-              >
+              <Link className="header__link" href="/services">
                 Services
               </Link>
             </ul>
             <ul className="header__bloc">
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/about"
-              >
+              <Link className="header__link" href="/about">
                 About Us
               </Link>
-              <Link
-                onClick={handleItemClick}
-                className="header__link"
-                href="/contacts"
-              >
+              <Link className="header__link" href="/contacts">
                 Contacts
               </Link>
-              {/* <a className="header__link" href="/">Ro/En</a> */}
             </ul>
-            <Link
-              onClick={handleItemClick}
-              className="header__logo logo"
-              href="/"
-            >
+            <Link className="header__logo logo" href="/">
               <Image
                 width={77}
                 height={24}
@@ -88,9 +72,6 @@ const Header = () => {
                 src={"/assets/logo/logo-text-svg.svg"}
                 alt="logo"
               />
-              {/* dada
-                <br/>
-                art.craft */}
             </Link>
           </div>
           <button
@@ -99,11 +80,7 @@ const Header = () => {
           >
             <div className="burger-icon"></div>
           </button>
-          <Link
-            onClick={handleItemClick}
-            className="header__logo header__logo-mobile logo"
-            href="/"
-          >
+          <Link className="header__logo header__logo-mobile logo" href="/">
             <Image
               width={77}
               height={24}
