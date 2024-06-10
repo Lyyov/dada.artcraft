@@ -1619,7 +1619,8 @@ input[type=submit]:hover {
 
   .know .slider__custom-nav-next {
       right: -32px;
-      z-index: 5
+      z-index: 5;
+      display: none;
   }
 }
 
@@ -2038,6 +2039,12 @@ input[type=submit]:hover {
   .footer__title {
       margin-bottom: 10px;
       margin-top: 30px
+  }
+  .footer__logo {
+    width: 100%;
+  }
+  .footer__logo svg {
+    width: 50%;
   }
 }
 
