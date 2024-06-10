@@ -1415,7 +1415,7 @@ input[type=submit]:hover {
   }
 
   .services__relative {
-      padding-top: 0
+      padding: 0;
   }
 
   .services__banner {
@@ -1427,7 +1427,8 @@ input[type=submit]:hover {
 
   .services__title {
       max-width: none;
-      padding: 0 0 0 15px
+      padding: 0 0 0 15px;
+      margin-bottom: 45px
   }
 
   .services__list {
@@ -1549,7 +1550,8 @@ input[type=submit]:hover {
 }
 
 .know__image {
-  width: 100%
+  width: 100%;
+  height: auto;
 }
 
 .know__item {
@@ -1997,7 +1999,12 @@ input[type=submit]:hover {
   text-transform: uppercase;
   letter-spacing: 8px;
   line-height: 1.6;
-  font-weight: 800
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.footer__logo svg {
+  width: 75%;
 }
 
 .footer__title {
@@ -2005,7 +2012,7 @@ input[type=submit]:hover {
   color: #fff;
   letter-spacing: .16px;
   text-transform: uppercase;
-  margin-bottom: 40px
+  margin-bottom: 10px
 }
 
 .footer__link {
@@ -3275,6 +3282,10 @@ hr {
 
 .projall__iamge-image {
   height: auto;
+}
+
+.cls-1 {
+  fill: #ddb407;
 }
 
 /*# sourceMappingURL=main.ae8c2f4d.chunk.css.map */

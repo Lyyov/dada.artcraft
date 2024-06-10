@@ -53,7 +53,7 @@ export const goodToKnowApi: TGoodToKnow[] = [
     text: "Usually, each project is crafted for about 3-6 weeks. Our practice shows that it is best to schedule the project in advance, but it all depends on the time of the year. If you need to launch in no time, feel free to call us to find a solution.",
   },
   {
-    title: "WHAT IF WE NEED JUST A LOGO?",
+    title: "WE NEED JUST A LOGO!",
     text: "We are open to the exclusive logo service, although the logo is just one element of the brand, and we think it is better if all the elements are built around a unique strategy so that you have a consistent presence everywhere.",
   },
 ];
