@@ -19,7 +19,7 @@ export const projects: TProject[] = [
     cover: "/assets/sagro/cover.jpg",
     to: "/sagro",
     text_allprojects:
-      "Sagro is a Moldavian company operating in the agricultural field.",
+      "Sagro is a Moldavian company operating in the agricultural field. Their main goal is to maintain and support businesses that produce, process and distribute agricultural products at high standards of integrity.",
     images: [
       {
         id: 0,
@@ -75,7 +75,7 @@ export const projects: TProject[] = [
     cover: "/assets/beauty-office/cover.jpg",
     to: "/beauty-office",
     text_allprojects:
-      "Beauty Office is a salon that specializes in beauty and self-care services. The primary objective was to use a distinctive logo and relevant colors to reflect the company's characteristics and personality. When designing the logo, I wanted to go for something simple but unique and elegant.",
+      "Beauty Office is a salon that specializes in beauty and self-care services. The primary objective was to use a distinctive logo and relevant colors to reflect the company's characteristics and personality.",
     images: [
       {
         id: 0,
@@ -228,7 +228,7 @@ export const projects: TProject[] = [
       },
     ],
     text: [
-      "Saula coffee brand appeared on the Spanish market in 1950. The brand provides 100% Arabica coffee beans from Colombia that are roasted in Barcelona. Besides, Saula is the Winner of the 2013 Double Gold Great Taste Awards. ",
+      "Saula coffee brand appeared on the Spanish market in 1950. The brand provides 100% Arabica coffee beans from Colombia that are roasted in Barcelona. Besides, Saula is the Winner of the 2013 Double Gold Great Taste Awards.",
       "Saula coffee shops use the best practices of the best Moldavian CAFÉS in this segment to offer a high-quality alternative to expensive ones — good coffee, good service, and reasonable prices. To stand out and be recognizable in the congested coffee shop market, the brand should grab the customer's interest and hold their attention with high-quality products. Also, we had to create an eye-catching design according to the existing old logo for all stationery and promotional material. Lastly, because the brand should be perceived as a cohesive visual system, the created guide ensure that each iteration in the local environment is consistent.",
       "The blend uses four varieties of Arabica coffee beans, all from small plantations, specially selected on the mountain shore. The luminescent yellow is used as a key color to emphasize the bright feeling and mood associated with the coffee brand, as we created a coffee shop reachable for everyone.",
     ],
@@ -239,7 +239,7 @@ export const projects: TProject[] = [
     cover: "/assets/pr_gisc/cover.jpg",
     to: "/pr-and-gisc",
     text_allprojects:
-      "Pr&Gisc is a well-established recruitment company that provides jobs and personnel to the UK construction sector.",
+      "Pr&Gisc is a well-established recruitment company that provides jobs and personnel to the UK construction sector. Moreover, the agency offers professional and efficient accounting, auditing, and taxing services.",
     images: [
       {
         id: 0,
@@ -282,7 +282,7 @@ export const projects: TProject[] = [
     cover: "/assets/mancomm/cover.jpg",
     to: "/mancomm",
     text_allprojects:
-      "Mancomm is the recruiting platform that is specializing on workflow managment and accounting.",
+      "Mancomm is the recruiting platform that is specializing on workflow managment and accounting. The company was looking to translate their platform’s unique benefits, that connects with candidates and organizations equally.",
     images: [
       {
         id: 0,

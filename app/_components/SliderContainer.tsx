@@ -26,7 +26,7 @@ function arrow(classNameNav: string, background: string, onClick?: () => void) {
           <g
             id="Desktop-HD"
             transform="translate(-1368.000000, -2801.000000)"
-            stroke={background ? "background" : "#ffffff"}
+            stroke={background ? background : "#ffffff"}
             strokeWidth="1.5"
           >
             <path
