@@ -7,7 +7,7 @@ import FormSubmittedNotification, {
 import { sendEmail } from "@/app/_lib/services/email";
 import ContactFormFields from "./ContactFormFields";
 import { TEmailTemplate } from "@/app/_components/email-templates/EmailTemplate";
-import { messageOnSendEmail } from "../_utlis";
+import { relative } from "path";
 
 const INITIAL_STATE = {
   firstName: "",
@@ -48,19 +48,27 @@ const ContactForm = () => {
     setLoading(false);
   };
 
-  const handleFormStatus = (status: TStatus) => {
-    return <FormSubmittedNotification status={status} />;
-  };
-
   return (
     <form onSubmit={handleSubmit}>
       <div className="row">
         <ContactFormFields {...data} setData={setData} />
         <div className="col-md-5">
-          <input type="submit" value="Submit" disabled={loading} />
+          <div className="row justify-center">
+            <div
+              className="col-auto"
+              style={{
+                position: "relative",
+              }}
+            >
+              <input type="submit" value="Submit" disabled={loading} />
+              {loading && <div className="loader"></div>}
+            </div>
+          </div>
         </div>
         <div className="col-sm-12">
-          {formStatus == "ok" && handleFormStatus(formStatus)}
+          {formStatus !== "false" && (
+            <FormSubmittedNotification status={formStatus} />
+          )}
         </div>
       </div>
     </form>

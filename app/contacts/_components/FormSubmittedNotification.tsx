@@ -7,7 +7,7 @@ type TNotification = {
 export type TStatus = "false" | "error" | "ok";
 const FormSubmittedNotification = ({ status }: TNotification) => {
   return (
-    <div className={`notification ${status === "ok" ? "succes" : "error"}`}>
+    <div className={`notification ${status !== "ok" && "error"}`}>
       <p className="notification_text">{messageOnSendEmail[status] || ""}</p>
     </div>
   );

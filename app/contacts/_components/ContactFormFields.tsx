@@ -23,6 +23,7 @@ export default function ContactFormFields({
             name="firstName"
             id="firstName"
             value={firstName}
+            required
             onChange={(e) =>
               setData((prev) => ({ ...prev, firstName: e.target.value }))
             }
@@ -43,6 +44,7 @@ export default function ContactFormFields({
             type="text"
             name="lastName"
             id="lastName"
+            required
             onChange={(e) =>
               setData((prev) => ({ ...prev, lastName: e.target.value }))
             }
@@ -64,6 +66,7 @@ export default function ContactFormFields({
             type="email"
             name="email"
             id="email"
+            required
             value={email}
             onChange={(e) =>
               setData((prev) => ({ ...prev, email: e.target.value }))
@@ -81,6 +84,7 @@ export default function ContactFormFields({
           }
         >
           <textarea
+            required
             rows={5}
             className="input-container__input"
             name="message"
