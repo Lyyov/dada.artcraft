@@ -49,7 +49,8 @@ main {
 
 @media(max-width: 767px) {
   main {
-      min-height:auto
+      min-height:auto;
+      padding-top: 60px;
   }
 }
 
@@ -1427,6 +1428,7 @@ input[type=submit]:hover:disabled {
   .services__do {
     padding-top: 0;
     margin-top: -1px;
+    padding-bottom: 40px;
   }
   .services__do .container {
       padding:0
@@ -1850,12 +1852,15 @@ input[type=submit]:hover:disabled {
 }
 
 @media(max-width: 767px) {
+  .header {
+    height: 60px;
+  }
   .header__container {
       position:fixed;
       background: #1e1e23;
       right: 0;
       top: 50px;
-      height: calc(100vh - 50px);
+      height: calc(100vh - 60px);
       width: 70vw;
       max-width: 400px;
       flex-direction: column;
@@ -1968,7 +1973,7 @@ input[type=submit]:hover:disabled {
   outline: 0;
   border: 0;
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 20px;
   z-index: 3;
   display: none
@@ -1976,7 +1981,8 @@ input[type=submit]:hover:disabled {
 
 @media(max-width: 767px) {
   .burger {
-      display:block
+      display:block;
+      
   }
 }
 

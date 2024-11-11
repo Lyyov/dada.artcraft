@@ -102,8 +102,8 @@ const Header = () => {
           </button>
           <Link className="header__logo header__logo-mobile logo" href="/">
             <Image
-              width={77}
-              height={24}
+              width={87}
+              height={34}
               loading="lazy"
               src={"/assets/logo/logo-text-svg.svg"}
               alt="logo"
