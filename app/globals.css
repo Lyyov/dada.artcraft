@@ -1680,7 +1680,6 @@ input[type=submit]:hover:disabled {
   letter-spacing: .61px;
   text-align: left;
   line-height: 55px;
-  margin-bottom: 40px
 }
 
 .contact__subtitle.right {
@@ -1712,10 +1711,6 @@ input[type=submit]:hover:disabled {
   display: block
 }
 
-.contact__address {
-  margin-top: 20px
-}
-
 .contact__phone {
   display: flex
 }
@@ -1729,7 +1724,8 @@ input[type=submit]:hover:disabled {
   color: #2c2c2c;
   letter-spacing: -.57px;
   text-align: left;
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  line-height: 25px;
 }
 
 .contact__address span,.contact__email span,.contact__phone span {
@@ -1771,9 +1767,8 @@ input[type=submit]:hover:disabled {
   }
 
   .contact__subtitle {
-      line-height: 1;
       font-size: 20px;
-      margin-bottom: 30px
+      line-height: 35px;
   }
 
   .contact__button {
