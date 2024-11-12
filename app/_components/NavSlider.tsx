@@ -22,6 +22,7 @@ const NavSlider = () => {
           slidesToShow: 3,
           variableWidth: true,
           swipeToSlide: true,
+          arrows: false,
         },
       },
     ],
