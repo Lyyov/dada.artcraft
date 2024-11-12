@@ -24,15 +24,14 @@ const Contact = () => {
               every aspect of what we do.
             </p> */}
             <p className="contact__address">
-              <span>REPUBLICA MOLDOVA</span>
+              <span>Republica Moldova</span>
               <br />
-              Chișinău, Roguleni 6.
+              Chișinău, Roguleni 6
             </p>
             <p className="contact__phone">
-              <span>Tel</span>
-              <span>
-                <a href="tel:+37367200165">(373) 67-200-165</a> <br />
-              </span>
+              <span>Telephone</span>
+              <br />
+              <a href="tel:+37367200165">+373 (67) 200 165</a> <br />
             </p>
             <p className="contact__email">
               <span>Email</span> <br />

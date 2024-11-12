@@ -1131,7 +1131,7 @@ input[type=submit]:hover:disabled {
 
 @media(max-width: 992px) {
   .projects-all {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   .projall__section:last-child {
     border: 0;
@@ -1717,14 +1717,6 @@ input[type=submit]:hover:disabled {
   display: block
 }
 
-.contact__phone {
-  display: flex
-}
-
-.contact__phone span {
-  padding-right: 15px
-}
-
 .contact__address,.contact__email,.contact__phone {
   font-size: 15px;
   color: #2c2c2c;
@@ -1737,7 +1729,6 @@ input[type=submit]:hover:disabled {
 .contact__address span,.contact__email span,.contact__phone span {
   font-size: inherit;
   font-weight: 600;
-  text-transform: uppercase;
   color: inherit
 }
 
@@ -1758,7 +1749,7 @@ input[type=submit]:hover:disabled {
 @media(max-width: 767px) {
   .contact {
       padding:40px 0;
-      padding-bottom: 70px;
+      padding-bottom: 50px;
   }
 
   .contact__title {
@@ -1779,7 +1770,7 @@ input[type=submit]:hover:disabled {
   }
 
   .contact__button {
-      margin-top: 30px
+      margin-top: 20px
   }
   .contact__subtitle.right {
   margin-bottom: 15px;
