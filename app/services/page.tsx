@@ -42,7 +42,7 @@ const Services = () => {
           <div className="services__do-content">
             <div className="row">
               <div className="col-md-12">
-                <h3 className="services__title title">What We Do</h3>
+                <h3 className="services__title title">What we do</h3>
               </div>
             </div>
             <div className="services__list row">
