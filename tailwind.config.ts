@@ -2,16 +2,20 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'background-primary': "var(--background-primary)",
+        'foreground-primary': "var(--foreground-primary)",
+        'background-secondary': "var(--background-secondary)",
+        'foreground-secondary': "var(--foreground-secondary)",
+        'accent': "var(--foreground-accent)",
       },
+      lineHeight: {
+        'nav-height': "var(--nav-height)",
+      }
     },
   },
   plugins: [],
