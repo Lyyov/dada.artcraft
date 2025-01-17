@@ -3,9 +3,7 @@ import { OneWorkProvider } from "@/entities/works/providers/WorkImageModal";
 
 interface IOneWorkLyout {
     children: React.ReactNode;
-    params: {
-        slug: string;
-    }
+    params: Promise<{ slug: string }>
 }
 
 export default async function RootLayout({
