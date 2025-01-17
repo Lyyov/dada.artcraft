@@ -1,0 +1,1 @@
+export { WorkImageModal } from './ui/WorkImageModal'
