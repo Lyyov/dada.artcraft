@@ -238,10 +238,14 @@ body {
 }
 
 /* home hero slider */
-.slider.slider.sliderHomeHero00 .slick-list,
-.slider.slider.sliderHomeHero00 .slick-track,
-.slider.slider.sliderHomeHero00 .slick-slide,
-.slider.slider.sliderHomeHero00 .slick-slide>div {
+.slider.slider.sliderHomeHero .slick-list,
+.slider.slider.sliderHomeHero .slick-track,
+.slider.slider.sliderHomeHero .slick-slide,
+.slider.slider.sliderHomeHero .slick-slide>div {
+  height: 100%;
+}
+
+.slider.nav-slider .slick-list {
   height: 100%;
 }
 
