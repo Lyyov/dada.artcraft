@@ -36,7 +36,7 @@ export const InputField = <T,>({ componentType, gridCols, mode = 'light', ...pro
                 )
             }
             <label className={clsx(
-                "text-[11px] tracking-[.03px] text-left uppercase font-semibold",
+                "text-[11px] tracking-[.18px] text-left uppercase font-semibold",
                 "absolute top-[5px] left-2.5 p-[5px] transition-transform duration-300 ease-in-out",
                 props.value ? "translate-y-[-17px]" : "",
                 mode === 'dark' ? "text-foreground-accent-hover bg-background-secondary" : "text-foreground-primary bg-background-primary"

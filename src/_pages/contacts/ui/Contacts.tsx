@@ -26,17 +26,17 @@ export const Contacts = () => (
             <div className="mt-10 md:mt-0">
                 <h5 className="title-secondary text-left">You can find us at:</h5>
 
-                <p className="text-[15px] tracking-[-.57px] leading-[25px] mb-7 mt-2">
+                <p className="paragraph text-[15px] leading-[25px] mb-7 mt-2">
                     <span className="text-[15px] font-bold">Republica Moldova</span>
                     <br />
                     Chișinău, Roguleni 6
                 </p>
-                <p className="text-[15px] tracking-[-.57px] leading-[25px] mb-7">
+                <p className="paragraph text-[15px] leading-[25px] mb-7">
                     <span className="text-[15px] font-bold">Telephone</span>
                     <br />
                     <a href="tel:+37367200165">+373 (67) 200 165</a> <br />
                 </p>
-                <p className="text-[15px] tracking-[-.57px] leading-[25px] mb-7">
+                <p className="paragraph text-[15px] leading-[25px] mb-7">
                     <span className="text-[15px] font-bold">Email</span> <br />
                     <a href="mailto:dada.artcraft@gmail.com">
                         dada.artcraft@gmail.com

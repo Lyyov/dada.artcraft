@@ -61,7 +61,7 @@ export const ContactForm = <T,>({ config, initialData, agreement, mode }: IIniti
                 {
                     agreement && (
                         <p className={clsx(
-                            "paragraph text-[15px] tracking-[-.57px] leading-[25px] mt-0",
+                            "paragraph text-[15px] leading-[25px] mt-0",
                             mode === 'dark' && "text-foreground-accent-hover"
                         )}>
                             {agreement}
