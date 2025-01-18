@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/widgets/header";
@@ -35,6 +36,7 @@ export default function RootLayout({
         <main className="min-h-[80vh] pt-[theme(height.nav-height)]">{children}</main>
         <div id="nav-backdrop"></div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

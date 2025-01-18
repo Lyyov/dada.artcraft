@@ -245,6 +245,19 @@ body {
   height: 100%;
 }
 
+.slider.slider.sliderHomeHero .slick-slide,
+.slider.slider.sliderHomeHero .slick-slide>div {
+  min-height: 86px;
+}
+
+@media screen and (min-width: 767px) {
+
+  .slider.slider.sliderHomeHero .slick-slide,
+  .slider.slider.sliderHomeHero .slick-slide>div {
+    min-height: 145px;
+  }
+}
+
 .slider.nav-slider .slick-list {
   height: 100%;
 }
