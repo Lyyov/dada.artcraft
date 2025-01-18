@@ -5,11 +5,10 @@ import { INavSliderItem } from "../types";
 
 export const NAV_SLIDER_CONTENT: INavSliderItem[] = WORKS_CONTENT.map(({ slug, href, images, cover }) => {
     const imgAlt = slug + " work images.";
-    const workHref = '/works' + href;
     if (slug === 'mancomm') {
         const imgCover = images.flat()[3].src;
         return ({
-            href: workHref,
+            href: href,
             cover: imgCover,
             imgAlt
         })
@@ -17,14 +16,14 @@ export const NAV_SLIDER_CONTENT: INavSliderItem[] = WORKS_CONTENT.map(({ slug, h
     if (slug === 'saula') {
         const imgCover = images.flat()[6].src;
         return ({
-            href: workHref,
+            href: href,
             cover: imgCover,
             imgAlt
         })
     }
 
     return ({
-        href: workHref,
+        href: href,
         cover,
         imgAlt
     })
