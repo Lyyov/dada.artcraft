@@ -225,7 +225,7 @@ body {
 
 .slider.one-work-modal-slider .slick-arrow {
   color: var(--foreground-secondary);
-  transform: translateY(50%);
+  transform: translateY(-50%);
   top: 50%;
 }
 
@@ -245,10 +245,10 @@ body {
   height: 100%;
 }
 
-.slider.slider.sliderHomeHero .slick-slide,
-.slider.slider.sliderHomeHero .slick-slide>div {
-  min-height: 86px;
+.slider.slider.sliderHomeHero .slick-slide>div>div {
+  display: flex !important;
 }
+
 
 @media screen and (min-width: 767px) {
 
