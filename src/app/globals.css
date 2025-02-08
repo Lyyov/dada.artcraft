@@ -48,7 +48,7 @@ body {
   }
 
   .paragraph {
-    @apply text-base md:text-[19px] font-normal font-open-sans text-foreground-primary text-justify leading-6 mt-7 mb-0 tracking-[.18px];
+    @apply text-base md:text-[17px] font-normal font-open-sans text-foreground-primary text-justify leading-6 mt-7 mb-0 tracking-[.18px];
   }
 
   .title-primary {
@@ -60,7 +60,7 @@ body {
   }
 
   .btn {
-    @apply cursor-pointer inline-flex justify-center items-center bg-accent text-foreground-primary font-bold font-open-sans text-lg px-7 h-[61px] rounded-[3px] min-w-[232px] transition-all duration-300 ease-in-out hover:bg-[var(--foreground-accent-hover)] active:bg-opacity-80 gap-2 mx-auto pb-0.5 disabled:bg-[#e1e1e1] disabled:pointer-events-none;
+    @apply cursor-pointer inline-flex justify-center items-center bg-background-secondary text-foreground-secondary font-semibold font-open-sans text-base px-7 h-[61px] rounded-full min-w-[300px] transition-all duration-300 ease-in-out hover:text-foreground-primary hover:bg-[var(--foreground-accent-hover)] active:bg-opacity-80 gap-2 mx-auto pb-0.5 disabled:bg-[#e1e1e1] disabled:pointer-events-none;
   }
 
   .section {
