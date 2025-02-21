@@ -68,6 +68,10 @@ body {
   }
 }
 
+.blocked {
+  overflow: hidden;
+}
+
 /* input style */
 .input:focus~label {
   -webkit-transform: translateY(-17px);
@@ -97,13 +101,13 @@ body {
   }
 }
 
-@media (width >= 1280px) {
+@media (width >=1280px) {
   .container.one-work-container {
     max-width: 1024px;
   }
 }
 
-@media (width >= 1440px) {
+@media (width >=1440px) {
   .container.one-work-container {
     max-width: 1280px;
   }
