@@ -7,10 +7,11 @@ import clsx from "clsx"
 export const WorkListItem = ({ cover, href, name, info, descriptionList }: IWorkListItem) => {
     return (
         <section key={name} className={clsx(
-            "group section border-b-[1px] last:border-0 border-background-secondary py-[30px] md:py-[50px]",
+            "group section py-[30px] md:py-[50px]",
             "md:flex md:even:flex-row-reverse gap-0 md:gap-4 items-center",
         )}>
-            <Link href={href} className="w-full md:w-1/2">
+            <div className="-mx-4 md:mx-0">
+                <Link href={href} className="w-full md:w-1/2">
                 <Image
                     loading="lazy"
                     src={cover}
@@ -20,6 +21,7 @@ export const WorkListItem = ({ cover, href, name, info, descriptionList }: IWork
                     className="w-full"
                 />
             </Link>
+            </div>
             <div className="text-center w-full md:w-1/2">
                 <div className="px-[4vw] *:text-center grid grid-cols-1 gap-[10px] pt-5 md:pt-0">
                     <h4 className="title-secondary md:text-[30px]">{name}</h4>
